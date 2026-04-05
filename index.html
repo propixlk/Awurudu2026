@@ -1,345 +1,798 @@
 <!DOCTYPE html>
 <html lang="si">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>අලුත් අවුරුදු නැකැත් සීට්ටුව 2026 | New Year Auspicious Times</title>
-    
-    <!-- Google Fonts for Traditional Sinhala Look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;700;800&family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'ausp-red': '#8A151B',
-                        'ausp-gold': '#E6A11D',
-                        'ausp-cream': '#FDF9F1',
-                        'ausp-green': '#2E6F40',
-                    },
-                    fontFamily: {
-                        'title': ['"Abhaya Libre"', 'serif'],
-                        'body': ['"Noto Sans Sinhala"', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>අලුත් අවුරුදු නැකැත් සීට්ටුව 2026 | Gammadda</title>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Noto+Sans+Sinhala:wght@300;400;600;700;900&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #f0a500;
+  --gold-light: #ffd700;
+  --gold-pale: #fff3c4;
+  --crimson: #c0392b;
+  --deep-red: #7f1d1d;
+  --orange: #e85d04;
+  --saffron: #f48c06;
+  --cream: #fdf6e3;
+  --dark: #0d0500;
+  --dark2: #1a0800;
+  --dark3: #2d1200;
+}
 
-    <style>
-        body {
-            background-color: #FDF9F1;
-            /* Subtle traditional background pattern */
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='#d4c4a9' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        /* Sun Animations */
-        @keyframes spin-slow {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        @keyframes pulse-glow {
-            0%, 100% { filter: drop-shadow(0 0 15px rgba(230, 161, 29, 0.4)); transform: scale(1); }
-            50% { filter: drop-shadow(0 0 25px rgba(230, 161, 29, 0.8)); transform: scale(1.02); }
-        }
-        
-        .sun-rays {
-            animation: spin-slow 24s linear infinite;
-            transform-origin: center;
-        }
-        .sun-container {
-            animation: pulse-glow 4s ease-in-out infinite;
-        }
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
 
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(138, 21, 27, 0.15), 0 10px 10px -5px rgba(138, 21, 27, 0.04);
-        }
+body {
+  background: var(--dark);
+  font-family: 'Noto Sans Sinhala', sans-serif;
+  overflow-x: hidden;
+  color: #3d1a00;
+}
 
-        .timer-box {
-            background: linear-gradient(145deg, #ffffff, #f0f0f0);
-            box-shadow: 3px 3px 10px #e6e6e6, -3px -3px 10px #ffffff;
-        }
-    </style>
+/* ── FIXED BACKGROUND ── */
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── FLOATING PETALS ── */
+#petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+.petal {
+  position: absolute;
+  bottom: -40px;
+  animation: riseUp linear infinite;
+  opacity: 0;
+  pointer-events: none;
+}
+@keyframes riseUp {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+  8%   { opacity: 0.85; }
+  92%  { opacity: 0.5; }
+  100% { transform: translateY(-110vh) rotate(520deg); opacity: 0; }
+}
+
+/* ═══════════════════════════════════
+   HERO
+═══════════════════════════════════ */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  padding: 2rem 1.5rem 5rem;
+  background: radial-gradient(ellipse 130% 80% at 50% 15%, #3d1200 0%, #1a0600 55%, #0d0400 100%);
+}
+
+/* Sun */
+.sun-container {
+  position: relative;
+  width: clamp(100px, 22vw, 155px);
+  height: clamp(100px, 22vw, 155px);
+  flex-shrink: 0;
+  margin-bottom: 1.2rem;
+}
+.sun-svg {
+  width: 100%; height: 100%;
+  animation: sunSpin 28s linear infinite;
+  filter: drop-shadow(0 0 16px #ffd700) drop-shadow(0 0 36px #f59e0b88);
+}
+@keyframes sunSpin { to { transform: rotate(360deg); } }
+.sun-core {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 40%; height: 40%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 35%, #fffde0, #ffe066 40%, #ffa500 80%, #ff6600);
+  box-shadow: 0 0 20px 8px #ffd700, 0 0 50px 20px #f59e0b88, 0 0 90px 35px #ea580c55;
+  animation: corePulse 2.5s ease-in-out infinite;
+  z-index: 10;
+}
+@keyframes corePulse {
+  0%,100% { box-shadow: 0 0 20px 8px #ffd700, 0 0 50px 20px #f59e0b88, 0 0 90px 35px #ea580c55; }
+  50%      { box-shadow: 0 0 35px 14px #ffd700, 0 0 80px 30px #f59e0baa, 0 0 130px 55px #ea580c88; }
+}
+
+/* Hero text */
+.hero-brand {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(0.65rem, 2vw, 1rem);
+  color: var(--gold);
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+  opacity: 0.9;
+  animation: fadeD 0.9s 0.1s both;
+}
+.hero-title {
+  font-family: 'Yatra One', cursive;
+  font-size: clamp(1.55rem, 6vw, 3.8rem);
+  background: linear-gradient(135deg, #ffd700 0%, #ff8800 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.25;
+  text-align: center;
+  filter: drop-shadow(0 2px 10px #f59e0b55);
+  animation: fadeD 0.9s 0.25s both;
+}
+.hero-year {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(2.2rem, 7.5vw, 4.5rem);
+  color: #fff;
+  text-shadow: 0 0 25px #ffd700, 0 0 60px #f59e0b, 0 0 100px #ea580c44;
+  line-height: 1;
+  margin: 0.15rem 0 0.1rem;
+  animation: fadeD 0.9s 0.4s both;
+}
+.hero-sub {
+  font-family: 'Yatra One', cursive;
+  font-size: clamp(0.75rem, 2.5vw, 1.15rem);
+  color: #ffd59d;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.6rem;
+  animation: fadeD 0.9s 0.55s both;
+}
+
+/* Hero main countdown */
+.mcd-wrap { text-align: center; animation: fadeD 0.9s 0.7s both; }
+.mcd-title {
+  font-family: 'Yatra One', cursive;
+  font-size: clamp(0.7rem, 2.2vw, 0.95rem);
+  color: rgba(255,213,120,0.82);
+  margin-bottom: 0.7rem;
+}
+.mcd-row {
+  display: flex;
+  gap: clamp(0.38rem, 2vw, 1rem);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.mcd-box {
+  position: relative;
+  background: linear-gradient(150deg, rgba(255,215,0,0.16), rgba(255,100,0,0.09));
+  border: 1.5px solid rgba(255,215,0,0.38);
+  border-radius: 14px;
+  padding: clamp(0.5rem,2vw,0.85rem) clamp(0.65rem,3vw,1.35rem);
+  min-width: clamp(56px,14vw,88px);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+.mcd-box::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:1px;
+  background: linear-gradient(90deg, transparent, rgba(255,215,0,0.7), transparent);
+}
+.mcd-num {
+  display: block;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.5rem, 5.5vw, 2.8rem);
+  color: #ffd700;
+  text-shadow: 0 0 14px #ffd700, 0 0 28px #f59e0b;
+  line-height: 1;
+}
+.mcd-lbl {
+  display: block;
+  font-size: clamp(0.48rem, 1.5vw, 0.6rem);
+  color: rgba(255,215,145,0.78);
+  margin-top: 0.28rem;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 1.6rem; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction:column; align-items:center; gap:0.3rem;
+  color: rgba(255,210,100,0.45);
+  font-size: 0.62rem;
+  font-family: 'Yatra One', cursive;
+  animation: bounce 2s ease-in-out infinite;
+  z-index: 3;
+}
+.scroll-cue svg { width:22px; height:22px; }
+@keyframes bounce {
+  0%,100%{ opacity:.4; transform:translateX(-50%) translateY(0); }
+  50%    { opacity:.85; transform:translateX(-50%) translateY(7px); }
+}
+
+/* ═══════════════════════════════════
+   EVENTS SECTION
+═══════════════════════════════════ */
+.events-section {
+  position: relative;
+  z-index: 2;
+  padding: 0 1rem 5rem;
+  background: linear-gradient(180deg,
+    #0d0400 0%, #1e0900 18%, #2d1000 50%, #1e0900 82%, #0d0400 100%
+  );
+}
+
+.ornament {
+  display: flex; align-items:center; gap:0.8rem;
+  max-width: 580px; margin: 0 auto 1.8rem;
+  padding: 2rem 1.5rem 0;
+}
+.orn-line {
+  flex:1; height:2px; border-radius:2px;
+  background: linear-gradient(90deg, transparent, var(--gold) 40%, var(--gold) 60%, transparent);
+}
+.orn-center { display:flex; align-items:center; gap:0.4rem; font-size:1.5rem; }
+.orn-diamond {
+  width:8px; height:8px;
+  background: var(--gold); transform:rotate(45deg);
+  box-shadow: 0 0 8px var(--gold);
+}
+
+.section-heading {
+  text-align: center;
+  font-family: 'Yatra One', cursive;
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  color: var(--gold);
+  text-shadow: 0 0 22px var(--gold);
+  margin-bottom: 2.5rem;
+  padding: 0 1rem;
+}
+
+/* ═══════════════════════════════════
+   CARDS
+═══════════════════════════════════ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
+  gap: 2rem;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.ecard {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(150deg, #fffbf0 0%, #fdf6dc 45%, #fff8e8 100%);
+  box-shadow:
+    0 2px 0 rgba(255,215,0,0.28),
+    0 8px 28px rgba(0,0,0,0.38),
+    0 0 0 1.5px rgba(240,165,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.92);
+  transition: transform 0.38s cubic-bezier(.22,.68,0,1.2), box-shadow 0.35s ease;
+  opacity: 0;
+  transform: translateY(45px) scale(0.98);
+}
+.ecard.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(.22,.68,0,1.2);
+}
+.ecard:hover {
+  transform: translateY(-8px) scale(1.016);
+  box-shadow:
+    0 2px 0 rgba(255,215,0,0.5),
+    0 22px 55px rgba(0,0,0,0.45),
+    0 0 0 2px rgba(240,165,0,0.38),
+    0 0 45px rgba(240,165,0,0.1);
+}
+
+/* ── Card header strip ── */
+.ecard-head {
+  position: relative;
+  background: linear-gradient(130deg, #7b0000 0%, #bf2111 45%, #8b1010 100%);
+  padding: 1rem 1.1rem 1rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  overflow: hidden;
+}
+.ecard-head::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255,215,0,0.045) 0, rgba(255,215,0,0.045) 1px,
+    transparent 1px, transparent 13px
+  );
+}
+.ecard-head::after {
+  content: '';
+  position: absolute; bottom:0; left:0; right:0; height:2.5px;
+  background: linear-gradient(90deg, transparent, var(--gold) 25%, var(--gold-light) 50%, var(--gold) 75%, transparent);
+}
+
+/* Mini sun in card header */
+.csun {
+  position: relative;
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  margin-top: 2px;
+}
+.csun-svg {
+  width: 100%; height: 100%;
+  animation: sunSpin 10s linear infinite;
+  filter: drop-shadow(0 0 4px #ffd700);
+}
+.csun-core {
+  position: absolute;
+  top:50%; left:50%;
+  transform: translate(-50%,-50%);
+  width: 38%; height: 38%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fffbc0, #ffd700 55%, #ff8800);
+  animation: corePulse 2s ease-in-out infinite;
+}
+
+.card-text-wrap {}
+.card-title {
+  font-family: 'Yatra One', cursive;
+  font-size: clamp(0.92rem, 2.8vw, 1.12rem);
+  color: #ffd700;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  line-height: 1.38;
+  position: relative; z-index: 1;
+}
+.card-num {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.56rem;
+  color: rgba(255,215,0,0.5);
+  letter-spacing: 0.2em;
+  margin-top: 0.18rem;
+  position: relative; z-index: 1;
+}
+
+/* ── Card body ── */
+.ecard-body {
+  padding: 1.2rem 1.3rem 0.6rem;
+}
+.ecard-desc {
+  font-size: clamp(0.78rem, 2.2vw, 0.88rem);
+  line-height: 2.05;
+  color: #4a1e00;
+}
+
+/* Highlighted dates & times */
+.hl-date {
+  display: inline-block;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #7c2d12;
+  font-weight: 700;
+  padding: 0.07em 0.42em;
+  border-radius: 6px;
+  border: 1px solid rgba(180,83,9,0.28);
+  font-size: 0.91em;
+  line-height: 1.5;
+  margin: 0.04em 0.04em;
+  box-shadow: 0 1px 4px rgba(180,83,9,0.12);
+}
+.hl-time {
+  display: inline-block;
+  background: linear-gradient(135deg, #fee2e2, #fca5a5);
+  color: #7f1d1d;
+  font-weight: 700;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.87em;
+  padding: 0.07em 0.48em;
+  border-radius: 6px;
+  border: 1px solid rgba(185,28,28,0.22);
+  line-height: 1.5;
+  margin: 0.04em 0.04em;
+  box-shadow: 0 1px 4px rgba(185,28,28,0.13);
+}
+
+/* ── Per-card countdown ── */
+.ecard-cd {
+  margin: 1rem 0 1.15rem;
+  background: linear-gradient(135deg, rgba(139,0,0,0.055), rgba(232,93,4,0.035));
+  border: 1.5px solid rgba(192,57,43,0.18);
+  border-radius: 14px;
+  padding: 0.85rem 0.95rem;
+  position: relative;
+  overflow: hidden;
+}
+.ecard-cd::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; height:1.5px;
+  background: linear-gradient(90deg, transparent, rgba(192,57,43,0.45), transparent);
+}
+.ecd-label {
+  font-family: 'Yatra One', cursive;
+  font-size: 0.65rem;
+  color: var(--deep-red);
+  text-align: center;
+  margin-bottom: 0.65rem;
+  opacity: 0.78;
+  letter-spacing: 0.03em;
+}
+.ecd-boxes {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 0.42rem;
+}
+.ecd-unit {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.42rem 0.18rem 0.32rem;
+  text-align: center;
+  border: 1px solid rgba(192,57,43,0.1);
+  box-shadow: 0 2px 7px rgba(0,0,0,0.07), inset 0 1px 0 rgba(255,255,255,0.95);
+  position: relative; overflow: hidden;
+}
+.ecd-unit::after {
+  content:''; position:absolute; top:48%; left:0; right:0; height:1px;
+  background: rgba(192,57,43,0.07);
+}
+.ecd-n {
+  display: block;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1rem, 3.5vw, 1.3rem);
+  color: var(--crimson);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.ecd-l {
+  display: block;
+  font-size: 0.49rem;
+  color: #92400e;
+  margin-top: 0.24rem;
+}
+.ecd-done {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 0.4rem;
+  font-family: 'Yatra One', cursive;
+  font-size: 0.8rem;
+  color: var(--crimson);
+}
+
+/* Card bottom gold bar */
+.ecard-bar {
+  height: 5px;
+  background: linear-gradient(90deg,
+    transparent 0%, var(--gold) 20%, var(--gold-light) 50%, var(--gold) 80%, transparent 100%
+  );
+  opacity: 0.68;
+}
+
+/* ═══════════════════════════════════
+   FOOTER
+═══════════════════════════════════ */
+.footer {
+  position: relative; z-index: 2;
+  background: #080200;
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  border-top: 1px solid rgba(240,165,0,0.1);
+  color: rgba(255,215,0,0.42);
+  font-size: 0.76rem;
+}
+.footer strong { color: var(--gold); }
+
+/* ── Animations ── */
+@keyframes fadeD {
+  from { opacity:0; transform:translateY(-18px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+</style>
 </head>
-<body class="font-body text-gray-800 antialiased min-h-screen relative pb-20">
+<body>
 
-    <!-- Top Border Decoration -->
-    <div class="h-3 w-full bg-ausp-red" style="background-image: linear-gradient(90deg, #8A151B 0%, #E6A11D 50%, #8A151B 100%);"></div>
+<canvas id="bg-canvas"></canvas>
+<div id="petals"></div>
 
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        
-        <!-- HEADER SECTION -->
-        <header class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-12">
-            <!-- Animated Sun -->
-            <div class="sun-container w-40 h-40 md:w-56 md:h-56 flex-shrink-0 relative">
-                <!-- Sun Rays (Rotating) -->
-                <svg class="sun-rays absolute inset-0 w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                            <stop offset="0%" stop-color="#FFD700" />
-                            <stop offset="70%" stop-color="#FF8C00" />
-                            <stop offset="100%" stop-color="#E63900" />
-                        </radialGradient>
-                    </defs>
-                    <!-- Alternating straight and wavy rays -->
-                    <g fill="url(#sunGrad)">
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(22.5 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(45 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(67.5 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(90 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(112.5 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(135 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(157.5 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(180 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(202.5 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(225 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(247.5 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(270 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(292.5 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(315 100 100)"/>
-                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(337.5 100 100)"/>
-                    </g>
-                </svg>
-                <!-- Sun Face (Static) -->
-                <svg class="absolute inset-0 w-full h-full p-6" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="35" fill="#FFD700" stroke="#8A151B" stroke-width="2"/>
-                    <!-- Eyes -->
-                    <path d="M35,45 Q40,40 45,45" fill="none" stroke="#8A151B" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="40" cy="46" r="2" fill="#8A151B"/>
-                    <path d="M55,45 Q60,40 65,45" fill="none" stroke="#8A151B" stroke-width="2" stroke-linecap="round"/>
-                    <circle cx="60" cy="46" r="2" fill="#8A151B"/>
-                    <!-- Nose -->
-                    <path d="M50,48 L48,55 L52,55 Z" fill="#8A151B" opacity="0.8"/>
-                    <!-- Mouth -->
-                    <path d="M38,60 Q50,70 62,60" fill="none" stroke="#8A151B" stroke-width="2" stroke-linecap="round"/>
-                    <!-- Decorative Mark -->
-                    <circle cx="50" cy="35" r="3" fill="#E63900"/>
-                </svg>
-            </div>
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
 
-            <!-- Title -->
-            <div class="text-center md:text-left z-10">
-                <h2 class="font-title text-ausp-gold text-2xl md:text-3xl font-bold mb-1 tracking-wider uppercase drop-shadow-sm">ගම්මැද්ද</h2>
-                <h1 class="font-title text-ausp-red text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 drop-shadow-md leading-tight">අලුත් අවුරුදු <br class="hidden md:block">නැකැත් සීට්ටුව</h1>
-                <div class="inline-block bg-ausp-red text-ausp-cream font-title text-3xl md:text-5xl px-8 py-2 rounded-full font-bold shadow-lg">
-                    2026
-                </div>
-            </div>
-        </header>
+  <!-- Animated Sun -->
+  <div class="sun-container">
+    <svg class="sun-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.92"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(22.5 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.82" transform="rotate(45 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(67.5 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.92" transform="rotate(90 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(112.5 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.82" transform="rotate(135 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(157.5 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.92" transform="rotate(180 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(202.5 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.82" transform="rotate(225 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(247.5 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.92" transform="rotate(270 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(292.5 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.82" transform="rotate(315 80 80)"/>
+      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(337.5 80 80)"/>
+    </svg>
+    <div class="sun-core"></div>
+  </div>
 
-        <!-- MAIN COUNTDOWN (Avurudu Udawa) -->
-        <div class="bg-white rounded-3xl p-6 md:p-10 shadow-xl border-t-8 border-ausp-red mb-16 text-center relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'2\' cy=\'2\' r=\'2\' fill=\'%238A151B\'/%3E%3C/svg%3E');"></div>
-            
-            <h3 class="font-title text-2xl md:text-4xl text-ausp-red font-bold mb-2">අලුත් අවුරුදු උදාවට තවත්</h3>
-            <p class="text-gray-600 font-bold mb-6">අප්‍රේල් මස 14 වැනි අඟහරුවාදා පූර්ව භාග 09.32 ට</p>
-            
-            <div class="flex flex-wrap justify-center gap-4 md:gap-8" id="main-countdown">
-                <!-- Main countdown gets injected here -->
-            </div>
-        </div>
+  <p class="hero-brand">✦ ගම්මැද්ද · Gammadda ✦</p>
+  <h1 class="hero-title">අලුත් අවුරුදු නැකැත් සීට්ටුව</h1>
+  <div class="hero-year">2026</div>
+  <p class="hero-sub">🌸 සිංහල හා දෙමළ නව වසර 🌸</p>
 
-        <!-- EVENTS GRID -->
-        <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Cards will be generated here by JavaScript -->
-        </div>
+  <div class="mcd-wrap">
+    <div class="mcd-title">⏳ අලුත් අවුරුදු උදාව දක්වා · April 14, 09:32</div>
+    <div class="mcd-row">
+      <div class="mcd-box"><span class="mcd-num" id="mD">00</span><span class="mcd-lbl">දිනයන්</span></div>
+      <div class="mcd-box"><span class="mcd-num" id="mH">00</span><span class="mcd-lbl">පැය</span></div>
+      <div class="mcd-box"><span class="mcd-num" id="mM">00</span><span class="mcd-lbl">මිනිත්තු</span></div>
+      <div class="mcd-box"><span class="mcd-num" id="mS">00</span><span class="mcd-lbl">තත්පර</span></div>
+    </div>
+  </div>
 
-    </main>
+  <div class="scroll-cue">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+    නැකැත් සීට්ටුව
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-ausp-red text-ausp-cream text-center py-6 mt-10">
-        <p class="font-title text-xl">සුබ අලුත් අවුරුද්දක් වේවා!</p>
-        <p class="text-sm mt-2 opacity-80">2026 සිංහල හා හින්දු අලුත් අවුරුදු නැකැත්</p>
-    </footer>
+<!-- ══════════ EVENTS ══════════ -->
+<section class="events-section">
 
-    <script>
-        // Data derived directly from the provided image
-        // Target times are configured for Sri Lanka Time (UTC+05:30)
-        const events = [
-            {
-                id: 'new-moon',
-                title: 'නව සඳ බැලීම',
-                dateHighlight: 'මාර්තු 20 සිකුරාදා / අප්‍රේල් 19 ඉරිදා',
-                timeHighlight: 'නව සඳ බැලීම',
-                targetTime: new Date('2026-04-19T18:00:00+05:30').getTime(), // Using the final date
-                description: 'අභිනව චන්ද්‍ර වර්ෂය සඳහා මාර්තු මස 20 වන සිකුරාදා දින ද, අභිනව සූර්ය වර්ෂය සඳහා අප්‍රේල් මස 19 වන ඉරිදා දින ද නව සඳ බැලීම මැනවි.',
-                icon: '🌙'
-            },
-            {
-                id: 'old-year-bath',
-                title: 'පරණ අවුරුද්ද සඳහා ස්නානය',
-                dateHighlight: 'අප්‍රේල් මස 13 වැනි සඳුදා',
-                timeHighlight: 'දිනය පුරා',
-                targetTime: new Date('2026-04-13T06:00:00+05:30').getTime(),
-                description: 'අප්‍රේල් මස 13 වැනි සඳුදා දින දිවුල් පත් යුෂ මිශ්‍ර නානු ගා ස්නානය කොට ඉෂ්ට දේවතා අනුස්මරණයේ යෙදී වාසය මැනවි.',
-                icon: '🌿'
-            },
-            {
-                id: 'dawn',
-                title: 'අලුත් අවුරුදු උදාව',
-                dateHighlight: 'අප්‍රේල් මස 14 වැනි අඟහරුවාදා',
-                timeHighlight: 'පූර්ව භාග 09.32 ට',
-                targetTime: new Date('2026-04-14T09:32:00+05:30').getTime(),
-                description: 'සිංහල අලුත් අවුරුද්ද උදාවේ.',
-                icon: '☀️',
-                isMain: true
-            },
-            {
-                id: 'punya-kalaya',
-                title: 'පුණ්‍ය කාලය',
-                dateHighlight: 'අප්‍රේල් මස 14 වැනි අඟහරුවාදා',
-                timeHighlight: 'පූ.භා 03.08 සිට අ.භා 03.56 දක්වා',
-                targetTime: new Date('2026-04-14T03:08:00+05:30').getTime(),
-                description: 'පුණ්‍ය කාලය බැවින් අප්‍රේල් මස 14 වන අඟහරුවාදා පූර්ව භාග 03.08 ට පළමුව ආහාර පාන ගෙන සියලු වැඩ අත්හැර ආගමික වතාවත්වල යෙදීම මැනවි.',
-                icon: '🙏'
-            },
-            {
-                id: 'cooking',
-                title: 'ආහාර පිසීම',
-                dateHighlight: 'අප්‍රේල් මස 14 වැනි අඟහරුවාදා',
-                timeHighlight: 'පූර්ව භාග 10.41 ට',
-                targetTime: new Date('2026-04-14T10:41:00+05:30').getTime(),
-                description: 'රක්ත වර්ණ වස්ත්‍රාභරණයෙන් සැරසී දකුණු දිශාව බලා ලිප් බැඳ ගිනි මොලවා කිරි බතක්ද, කැවිලි වර්ගයක්ද, දී කිරි සහ විළඳ ද, පිළියෙල කර ගැනීම මැනවි.',
-                icon: '🔥'
-            },
-            {
-                id: 'work-eat',
-                title: 'වැඩ ඇල්ලීම, ගනුදෙනු කිරීම හා ආහාර අනුභවය',
-                dateHighlight: 'අප්‍රේල් මස 14 වැනි අඟහරුවාදා',
-                timeHighlight: 'අපර භාග 12.05 ට',
-                targetTime: new Date('2026-04-14T12:05:00+05:30').getTime(),
-                description: 'රක්ත වර්ණ වස්ත්‍රාභරණයෙන් සැරසී දකුණු දිශාව බලා සියලු වැඩ අල්ලා ගනුදෙනු කොට ආහාර අනුභවය කිරීම මැනවි.',
-                icon: '🤝'
-            },
-            {
-                id: 'anointing',
-                title: 'හිසතෙල් ගෑම',
-                dateHighlight: 'අප්‍රේල් මස 15 වැනි බදාදා',
-                timeHighlight: 'පූර්ව භාග 06.54 ට',
-                targetTime: new Date('2026-04-15T06:54:00+05:30').getTime(),
-                description: 'නැගෙනහිර දිශාව බලා හිසට කොහොඹ පත්ද, පයට කොළොන් පත් ද තබා පච්ච වර්ණ වස්ත්‍රාභරණයෙන් සැරසී කොහොඹ පත් යුෂ මිශ්‍ර නානු හා තෙල් ගා ස්නානය කිරීම මැනවි.',
-                icon: '💆'
-            },
-            {
-                id: 'leave-work',
-                title: 'රැකී රක්ෂා සඳහා පිටත්ව යාම',
-                dateHighlight: 'අප්‍රේල් මස 20 වැනි සඳුදා',
-                timeHighlight: 'පූර්ව භාග 06.27 ට',
-                targetTime: new Date('2026-04-20T06:27:00+05:30').getTime(),
-                description: 'ශ්වේත වර්ණ වස්ත්‍රාභරණයෙන් සැරසී කිරිබත් සහ එළකිරි මිශ්‍ර කැවිලිද අනුභව කර දකුණු දිශාව බලා පිටත් වීම මැනවි.',
-                icon: '💼'
-            }
-        ];
+  <div class="ornament">
+    <div class="orn-line"></div>
+    <div class="orn-center"><div class="orn-diamond"></div><span>🌺</span><div class="orn-diamond"></div></div>
+    <div class="orn-line"></div>
+  </div>
+  <h2 class="section-heading">✦ නැකැත් සීට්ටුව 2026 ✦</h2>
 
-        // Format countdown string
-        function getCountdownValues(distance) {
-            if (distance < 0) return null;
-            return {
-                days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-                hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-                minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-                seconds: Math.floor((distance % (1000 * 60)) / 1000)
-            };
-        }
+  <div class="cards-grid" id="cardsGrid"></div>
 
-        // Generate Grid Cards
-        const gridContainer = document.getElementById('events-grid');
-        let cardElements = {};
+  <div class="ornament" style="padding-top:2rem;margin-bottom:0">
+    <div class="orn-line"></div>
+    <div class="orn-center"><div class="orn-diamond"></div><span>🌸</span><div class="orn-diamond"></div></div>
+    <div class="orn-line"></div>
+  </div>
+</section>
 
-        events.forEach(event => {
-            if(event.isMain) return; // Handled separately
+<footer class="footer">
+  <p>🌸 <strong>සිංහල හා දෙමළ නව වසර 2026</strong> — ගම්මැද්ද 🌸</p>
+  <p style="margin-top:0.5rem;opacity:0.35;font-size:0.66rem">Gammadda · Sinhala & Tamil New Year Nakath Seetthuwa 2026</p>
+</footer>
 
-            const card = document.createElement('div');
-            card.className = "bg-white rounded-2xl shadow-lg border-t-4 border-ausp-red p-6 card-hover flex flex-col h-full relative overflow-hidden";
-            
-            card.innerHTML = `
-                <div class="flex items-center gap-3 mb-4">
-                    <div class="text-3xl">${event.icon}</div>
-                    <h3 class="font-title text-2xl text-ausp-red font-bold leading-tight">${event.title}</h3>
-                </div>
-                
-                <div class="mb-4">
-                    <div class="text-gray-800 font-bold text-lg mb-1">${event.dateHighlight}</div>
-                    <div class="inline-block bg-yellow-100 text-ausp-red border border-yellow-300 font-bold px-3 py-1 rounded-md text-md shadow-sm">
-                        ${event.timeHighlight}
-                    </div>
-                </div>
-                
-                <p class="text-gray-700 leading-relaxed flex-grow text-sm md:text-base">${event.description}</p>
-                
-                <div class="mt-5 pt-4 border-t border-gray-100">
-                    <div id="timer-${event.id}" class="text-center font-bold text-sm bg-gray-50 rounded-lg py-2 text-ausp-green border border-gray-200">
-                        ගණනය කරමින්...
-                    </div>
-                </div>
-            `;
-            gridContainer.appendChild(card);
-            cardElements[event.id] = document.getElementById(`timer-${event.id}`);
-        });
+<script>
+/* ═══════════════════════════════════
+   STARFIELD
+═══════════════════════════════════ */
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
+let stars = [], W, H;
+function initCanvas() {
+  W = canvas.width  = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+  stars = Array.from({length:230}, () => ({
+    x: Math.random()*W, y: Math.random()*H,
+    r: Math.random()*1.7+0.2,
+    a: Math.random(),
+    da: (Math.random()*0.006+0.002)*(Math.random()<.5?1:-1)
+  }));
+}
+initCanvas();
+window.addEventListener('resize', initCanvas);
+(function drawBg() {
+  ctx.clearRect(0,0,W,H);
+  stars.forEach(s => {
+    s.a += s.da;
+    if(s.a>1||s.a<0.05) s.da*=-1;
+    ctx.beginPath();
+    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle=`rgba(255,228,140,${s.a})`;
+    ctx.fill();
+  });
+  requestAnimationFrame(drawBg);
+})();
 
-        // The Main Event setup
-        const mainEvent = events.find(e => e.isMain);
-        const mainTimerContainer = document.getElementById('main-countdown');
+/* ═══════════════════════════════════
+   PETALS
+═══════════════════════════════════ */
+const petalEmoji = ['🌸','🌺','✨','⭐','💛','🌼','🌻'];
+const petalWrap  = document.getElementById('petals');
+function spawnPetal() {
+  const p   = document.createElement('div');
+  p.className = 'petal';
+  const dur = Math.random()*9+7;
+  const del = Math.random()*2;
+  p.style.cssText = `left:${Math.random()*100}vw;font-size:${Math.random()*12+10}px;animation-duration:${dur}s;animation-delay:${del}s;`;
+  p.textContent = petalEmoji[Math.floor(Math.random()*petalEmoji.length)];
+  petalWrap.appendChild(p);
+  setTimeout(() => p.remove(), (dur+del+1)*1000);
+}
+for(let i=0;i<14;i++) setTimeout(spawnPetal, i*250);
+setInterval(spawnPetal, 850);
 
-        function createMainTimeBox(value, label) {
-            return `
-                <div class="timer-box w-20 h-24 md:w-28 md:h-32 flex flex-col items-center justify-center rounded-xl md:rounded-2xl border-b-4 border-ausp-gold">
-                    <span class="text-3xl md:text-5xl font-black text-ausp-red">${value.toString().padStart(2, '0')}</span>
-                    <span class="text-xs md:text-sm font-bold text-gray-500 mt-1 uppercase">${label}</span>
-                </div>
-            `;
-        }
+/* ═══════════════════════════════════
+   MINI-SUN SVG TEMPLATE (for cards)
+═══════════════════════════════════ */
+function miniSunSVG() {
+  const pts = Array.from({length:12},(_,i)=>
+    `<polygon points="20,1 21.5,14 18.5,14" fill="${i%2===0?'#ffd700':'#ffaa00'}" opacity="${0.82+Math.floor(i/2)%2*0.08}" transform="rotate(${i*30} 20 20)"/>`
+  ).join('');
+  return `<svg class="csun-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">${pts}</svg>`;
+}
 
-        // Update loop
-        function updateAllTimers() {
-            const now = new Date().getTime();
+/* ═══════════════════════════════════
+   EVENT DATA
+═══════════════════════════════════ */
+const events = [
+  {
+    num:'01', icon:'🔥', title:'කවි සඳ බැළීම',
+    sub:'KAVI SANDA BAELIMA',
+    target: new Date('2026-04-19T06:00:00'),
+    cdLabel:'අප්‍රේල් 19 | කවි සඳ බැළීම දක්වා',
+    desc: `අතිශය චන්ද්‍ර විශේෂ සඳහා <span class="hl-date">මාර්තු මස 20 වන සිකුරාදා</span> දින ද,
+           අතිශය සූර්ය විශේෂ සඳහා <span class="hl-date">අප්‍රේල් මස 19 වන</span>
+           ඉරිදා දින ද කවි සඳ බැළීම මැනවි.`
+  },
+  {
+    num:'02', icon:'🌿', title:'පරණ අවුරුද්ද සඳහා ස්නානය',
+    sub:'PARAN AVURUDDA SNAANAYA',
+    target: new Date('2026-04-13T08:00:00'),
+    cdLabel:'අප්‍රේල් 13 | ස්නාන දිනය දක්වා',
+    desc: `<span class="hl-date">අප්‍රේල් මස 13 වෙනි</span> සඳුදා දින
+           දිවුල් පත් යුමු මිගු නානු ගා ස්නානය කොට
+           ඉන්ට දෙවනා අනුස්මරණයේ යෙදී වාසය මැනවි.`
+  },
+  {
+    num:'03', icon:'☀️', title:'අලුත් අවුරුදු උදාව',
+    sub:'ALUTH AVURUDU UDAAWA',
+    target: new Date('2026-04-14T09:32:00'),
+    cdLabel:'අප්‍රේල් 14 | 09:32 | නව අවුරුදු උදාව දක්වා',
+    desc: `<span class="hl-date">අප්‍රේල් මස 14 වෙනි</span> අඟහරුවාදා
+           පූර්ව භාග <span class="hl-time">09:32</span> ට
+           සිංහල අලුත් අවුරුදු උදාවේසි.`
+  },
+  {
+    num:'04', icon:'🕯️', title:'පුණප කාලය',
+    sub:'PUNAPA KALAYA',
+    target: new Date('2026-04-14T03:08:00'),
+    cdLabel:'අප්‍රේල් 14 | 03:08 | පුණප කාලය දක්වා',
+    desc: `<span class="hl-date">අප්‍රේල් මස 14 වෙනි</span> අඟහරුවාදා
+           පූර්ව භාග <span class="hl-time">03:08</span> සිට
+           ළදිනම අපර භාග <span class="hl-time">03:56</span> දක්වා පුණප කාලය බැවින්,
+           <span class="hl-date">අප්‍රේල් 14</span> පූර්ව භාග <span class="hl-time">03:08</span> ට
+           පළමුව ආහාර පාන ගෙන සියලු වැඩ අත්හැර
+           ආගමික වත්යාවත්වල යෙදීම මැනවි.`
+  },
+  {
+    num:'05', icon:'🍚', title:'ආහාර පිසීම',
+    sub:'AAHARA PISEEMA',
+    target: new Date('2026-04-14T10:41:00'),
+    cdLabel:'අප්‍රේල් 14 | 10:41 | ආහාර පිසීම දක්වා',
+    desc: `<span class="hl-date">අප්‍රේල් මස 14 වෙනි</span> අඟහරුවාදා
+           පූර්ව භාග <span class="hl-time">10:41</span> ට රක්ත වර්ණ වස්තූරණයෙන්
+           සාරිසි දකුණු දිගාව බලා ලිප් බඳා ගිනි මෙලවා
+           කිරි බතක්ද, කෑව්ලී විශේෂයක්, දී කිරි සහ විලඳ ද,
+           පිළිලෙල කර ගැනීම මැනවි.`
+  },
+  {
+    num:'06', icon:'💫', title:'වැඩ ඇළ්ළිම, ගනුදෙනු හා ආහාර අනුභවය',
+    sub:'WADA AELLIMA · GAANUDENUU',
+    target: new Date('2026-04-14T12:05:00'),
+    cdLabel:'අප්‍රේල් 14 | 12:05 | වැඩ ඇළ්ළිම දක්වා',
+    desc: `<span class="hl-date">අප්‍රේල් මස 14 වෙනි</span> අඟහරුවාදා
+           අපර භාග <span class="hl-time">12:05</span> ට
+           රක්ත වර්ණ වස්තූරණයෙන් සාරිසි
+           දකුණු දිගාව බලා සිතල් වැඩ ඇළ්ළා
+           ගනුදෙනු කොට ආහාර අනුභව කිරීම මැනවි.`
+  },
+  {
+    num:'07', icon:'🌊', title:'හිසතෙල් ගෑම',
+    sub:'HISATEL GAEMA',
+    target: new Date('2026-04-15T06:54:00'),
+    cdLabel:'අප්‍රේල් 15 | 06:54 | හිසතෙල් ගෑම දක්වා',
+    desc: `<span class="hl-date">අප්‍රේල් මස 15 වෙනි</span> බදාදා
+           පූර්ව භාග <span class="hl-time">06:54</span> ට
+           නෙළෙනෙකිරිට දිගාව බලා හිතා කොහොඹා පත්ද,
+           පාළ කොළේන් පත් ද තබා පස්ව වර්ණ
+           වස්තූරණයෙන් සාරිසි කෝළ් පුළු මිගු
+           නානු හා නෙල් ගා ස්නානය කිරීම මැනවි.`
+  },
+  {
+    num:'08', icon:'🛡️', title:'රැකි රක්ෂා සඳහා පිටත්ව යාම',
+    sub:'RUKI RAKSHA SANDAHA',
+    target: new Date('2026-04-20T06:27:00'),
+    cdLabel:'අප්‍රේල් 20 | 06:27 | පිටත්ව යාම දක්වා',
+    desc: `<span class="hl-date">අප්‍රේල් මස 20 වෙනි</span> සඳුදා
+           පූර්ව භාග <span class="hl-time">06:27</span> ට
+           හරිත වර්ණ වස්තූරණයෙන් සාරිසි
+           කිරිබත් සහ එළකිරි මිගු කාළිලිඳ අනුභව කර
+           දකුණු දිගාව බලා පිටත් වීම මැනවි.`
+  }
+];
 
-            // Update Main Event
-            const mainDistance = mainEvent.targetTime - now;
-            const mainVals = getCountdownValues(mainDistance);
-            
-            if (mainVals) {
-                mainTimerContainer.innerHTML = 
-                    createMainTimeBox(mainVals.days, 'දින') +
-                    createMainTimeBox(mainVals.hours, 'පැය') +
-                    createMainTimeBox(mainVals.minutes, 'මිනිත්තු') +
-                    createMainTimeBox(mainVals.seconds, 'තත්පර');
-            } else {
-                mainTimerContainer.innerHTML = `<div class="text-2xl font-bold text-ausp-green p-4 bg-green-50 rounded-xl w-full border border-green-200">සුබ අලුත් අවුරුද්දක් වේවා! (මෙම නැකත පසු විය)</div>`;
-            }
+/* ═══════════════════════════════════
+   BUILD CARDS
+═══════════════════════════════════ */
+const grid = document.getElementById('cardsGrid');
+events.forEach((ev, i) => {
+  const card = document.createElement('div');
+  card.className = 'ecard';
+  card.dataset.delay = i * 80;
+  card.innerHTML = `
+    <div class="ecard-head">
+      <div class="csun">${miniSunSVG()}<div class="csun-core"></div></div>
+      <div class="card-text-wrap">
+        <div class="card-title">${ev.icon} ${ev.title}</div>
+        <div class="card-num">EVENT ${ev.num} · ${ev.sub}</div>
+      </div>
+    </div>
+    <div class="ecard-body">
+      <p class="ecard-desc">${ev.desc}</p>
+      <div class="ecard-cd">
+        <div class="ecd-label">☀ ${ev.cdLabel}</div>
+        <div class="ecd-boxes" id="cd${i}"></div>
+      </div>
+    </div>
+    <div class="ecard-bar"></div>
+  `;
+  grid.appendChild(card);
+});
 
-            // Update Grid Cards
-            events.forEach(event => {
-                if(event.isMain) return;
-                
-                const el = cardElements[event.id];
-                const distance = event.targetTime - now;
-                const vals = getCountdownValues(distance);
+/* ═══════════════════════════════════
+   COUNTDOWN ENGINE
+═══════════════════════════════════ */
+function pad(n) { return String(n).padStart(2,'0'); }
 
-                if (vals) {
-                    el.innerHTML = `තවත්: ${vals.days}d ${vals.hours}h ${vals.minutes}m ${vals.seconds}s`;
-                    el.className = "text-center font-bold text-sm bg-gray-50 rounded-lg py-2 text-ausp-red border border-gray-200";
-                } else {
-                    el.innerHTML = `මෙම නැකත පසු විය`;
-                    el.className = "text-center font-bold text-sm bg-green-50 rounded-lg py-2 text-ausp-green border border-green-200";
-                }
-            });
-        }
+function diff(target) {
+  const ms = target - Date.now();
+  if(ms <= 0) return null;
+  const s = Math.floor(ms/1000);
+  return { d:Math.floor(s/86400), h:Math.floor(s%86400/3600), m:Math.floor(s%3600/60), s:s%60 };
+}
 
-        // Initialize and start interval
-        updateAllTimers();
-        setInterval(updateAllTimers, 1000);
+/* Main hero */
+const MAIN = new Date('2026-04-14T09:32:00');
+function tickMain() {
+  const t = diff(MAIN);
+  document.getElementById('mD').textContent = t?pad(t.d):'00';
+  document.getElementById('mH').textContent = t?pad(t.h):'00';
+  document.getElementById('mM').textContent = t?pad(t.m):'00';
+  document.getElementById('mS').textContent = t?pad(t.s):'00';
+}
+tickMain(); setInterval(tickMain, 1000);
 
-    </script>
+/* Cards */
+const LABELS = ['දිනය','පැය','මිනිත්','තත්'];
+function tickCards() {
+  events.forEach((ev, i) => {
+    const el = document.getElementById('cd'+i);
+    if(!el) return;
+    const t = diff(ev.target);
+    if(!t) {
+      el.innerHTML = `<div class="ecd-done">✅ නැකැත් කාලය ගෙවී ගොස් ඇත</div>`;
+      return;
+    }
+    el.innerHTML = [t.d,t.h,t.m,t.s].map((v,j)=>`
+      <div class="ecd-unit">
+        <span class="ecd-n">${pad(v)}</span>
+        <span class="ecd-l">${LABELS[j]}</span>
+      </div>`).join('');
+  });
+}
+tickCards(); setInterval(tickCards, 1000);
+
+/* ═══════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════ */
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      const d = parseInt(e.target.dataset.delay||0);
+      setTimeout(()=>e.target.classList.add('visible'), d);
+      ro.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.07 });
+document.querySelectorAll('.ecard').forEach(c => ro.observe(c));
+</script>
 </body>
 </html>
