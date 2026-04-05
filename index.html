@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>අලුත් අවුරුදු නැකැත් සීට්ටුව 2026 | New Year Auspicious Times</title>
+    
+    <!-- Google Fonts for Traditional Sinhala Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500;700;800&family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ausp-red': '#8A151B',
+                        'ausp-gold': '#E6A11D',
+                        'ausp-cream': '#FDF9F1',
+                        'ausp-green': '#2E6F40',
+                    },
+                    fontFamily: {
+                        'title': ['"Abhaya Libre"', 'serif'],
+                        'body': ['"Noto Sans Sinhala"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FDF9F1;
+            /* Subtle traditional background pattern */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='#d4c4a9' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        /* Sun Animations */
+        @keyframes spin-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(230, 161, 29, 0.4)); transform: scale(1); }
+            50% { filter: drop-shadow(0 0 25px rgba(230, 161, 29, 0.8)); transform: scale(1.02); }
+        }
+        
+        .sun-rays {
+            animation: spin-slow 24s linear infinite;
+            transform-origin: center;
+        }
+        .sun-container {
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(138, 21, 27, 0.15), 0 10px 10px -5px rgba(138, 21, 27, 0.04);
+        }
+
+        .timer-box {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            box-shadow: 3px 3px 10px #e6e6e6, -3px -3px 10px #ffffff;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800 antialiased min-h-screen relative pb-20">
+
+    <!-- Top Border Decoration -->
+    <div class="h-3 w-full bg-ausp-red" style="background-image: linear-gradient(90deg, #8A151B 0%, #E6A11D 50%, #8A151B 100%);"></div>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <!-- HEADER SECTION -->
+        <header class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-12">
+            <!-- Animated Sun -->
+            <div class="sun-container w-40 h-40 md:w-56 md:h-56 flex-shrink-0 relative">
+                <!-- Sun Rays (Rotating) -->
+                <svg class="sun-rays absolute inset-0 w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                            <stop offset="0%" stop-color="#FFD700" />
+                            <stop offset="70%" stop-color="#FF8C00" />
+                            <stop offset="100%" stop-color="#E63900" />
+                        </radialGradient>
+                    </defs>
+                    <!-- Alternating straight and wavy rays -->
+                    <g fill="url(#sunGrad)">
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(22.5 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(45 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(67.5 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(90 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(112.5 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(135 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(157.5 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(180 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(202.5 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(225 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(247.5 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(270 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(292.5 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(315 100 100)"/>
+                        <path d="M100,0 L110,40 L100,20 L90,40 Z" transform="rotate(337.5 100 100)"/>
+                    </g>
+                </svg>
+                <!-- Sun Face (Static) -->
+                <svg class="absolute inset-0 w-full h-full p-6" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="35" fill="#FFD700" stroke="#8A151B" stroke-width="2"/>
+                    <!-- Eyes -->
+                    <path d="M35,45 Q40,40 45,45" fill="none" stroke="#8A151B" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="40" cy="46" r="2" fill="#8A151B"/>
+                    <path d="M55,45 Q60,40 65,45" fill="none" stroke="#8A151B" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="60" cy="46" r="2" fill="#8A151B"/>
+                    <!-- Nose -->
+                    <path d="M50,48 L48,55 L52,55 Z" fill="#8A151B" opacity="0.8"/>
+                    <!-- Mouth -->
+                    <path d="M38,60 Q50,70 62,60" fill="none" stroke="#8A151B" stroke-width="2" stroke-linecap="round"/>
+                    <!-- Decorative Mark -->
+                    <circle cx="50" cy="35" r="3" fill="#E63900"/>
+                </svg>
+            </div>
+
+            <!-- Title -->
+            <div class="text-center md:text-left z-10">
+                <h2 class="font-title text-ausp-gold text-2xl md:text-3xl font-bold mb-1 tracking-wider uppercase drop-shadow-sm">ගම්මැද්ද</h2>
+                <h1 class="font-title text-ausp-red text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 drop-shadow-md leading-tight">අලුත් අවුරුදු <br class="hidden md:block">නැකැත් සීට්ටුව</h1>
+                <div class="inline-block bg-ausp-red text-ausp-cream font-title text-3xl md:text-5xl px-8 py-2 rounded-full font-bold shadow-lg">
+                    2026
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN COUNTDOWN (Avurudu Udawa) -->
+        <div class="bg-white rounded-3xl p-6 md:p-10 shadow-xl border-t-8 border-ausp-red mb-16 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'2\' cy=\'2\' r=\'2\' fill=\'%238A151B\'/%3E%3C/svg%3E');"></div>
+            
+            <h3 class="font-title text-2xl md:text-4xl text-ausp-red font-bold mb-2">අලුත් අවුරුදු උදාවට තවත්</h3>
+            <p class="text-gray-600 font-bold mb-6">අප්‍රේල් මස 14 වැනි අඟහරුවාදා පූර්ව භාග 09.32 ට</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8" id="main-countdown">
+                <!-- Main countdown gets injected here -->
+            </div>
+        </div>
+
+        <!-- EVENTS GRID -->
+        <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Cards will be generated here by JavaScript -->
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ausp-red text-ausp-cream text-center py-6 mt-10">
+        <p class="font-title text-xl">සුබ අලුත් අවුරුද්දක් වේවා!</p>
+        <p class="text-sm mt-2 opacity-80">2026 සිංහල හා හින්දු අලුත් අවුරුදු නැකැත්</p>
+    </footer>
+
+    <script>
+        // Data derived directly from the provided image
+        // Target times are configured for Sri Lanka Time (UTC+05:30)
+        const events = [
+            {
+                id: 'new-moon',
+                title: 'නව සඳ බැලීම',
+                dateHighlight: 'මාර්තු 20 සිකුරාදා / අප්‍රේල් 19 ඉරිදා',
+                timeHighlight: 'නව සඳ බැලීම',
+                targetTime: new Date('2026-04-19T18:00:00+05:30').getTime(), // Using the final date
+                description: 'අභිනව චන්ද්‍ර වර්ෂය සඳහා මාර්තු මස 20 වන සිකුරාදා දින ද, අභිනව සූර්ය වර්ෂය සඳහා අප්‍රේල් මස 19 වන ඉරිදා දින ද නව සඳ බැලීම මැනවි.',
+                icon: '🌙'
+            },
+            {
+                id: 'old-year-bath',
+                title: 'පරණ අවුරුද්ද සඳහා ස්නානය',
+                dateHighlight: 'අප්‍රේල් මස 13 වැනි සඳුදා',
+                timeHighlight: 'දිනය පුරා',
+                targetTime: new Date('2026-04-13T06:00:00+05:30').getTime(),
+                description: 'අප්‍රේල් මස 13 වැනි සඳුදා දින දිවුල් පත් යුෂ මිශ්‍ර නානු ගා ස්නානය කොට ඉෂ්ට දේවතා අනුස්මරණයේ යෙදී වාසය මැනවි.',
+                icon: '🌿'
+            },
+            {
+                id: 'dawn',
+                title: 'අලුත් අවුරුදු උදාව',
+                dateHighlight: 'අප්‍රේල් මස 14 වැනි අඟහරුවාදා',
+                timeHighlight: 'පූර්ව භාග 09.32 ට',
+                targetTime: new Date('2026-04-14T09:32:00+05:30').getTime(),
+                description: 'සිංහල අලුත් අවුරුද්ද උදාවේ.',
+                icon: '☀️',
+                isMain: true
+            },
+            {
+                id: 'punya-kalaya',
+                title: 'පුණ්‍ය කාලය',
+                dateHighlight: 'අප්‍රේල් මස 14 වැනි අඟහරුවාදා',
+                timeHighlight: 'පූ.භා 03.08 සිට අ.භා 03.56 දක්වා',
+                targetTime: new Date('2026-04-14T03:08:00+05:30').getTime(),
+                description: 'පුණ්‍ය කාලය බැවින් අප්‍රේල් මස 14 වන අඟහරුවාදා පූර්ව භාග 03.08 ට පළමුව ආහාර පාන ගෙන සියලු වැඩ අත්හැර ආගමික වතාවත්වල යෙදීම මැනවි.',
+                icon: '🙏'
+            },
+            {
+                id: 'cooking',
+                title: 'ආහාර පිසීම',
+                dateHighlight: 'අප්‍රේල් මස 14 වැනි අඟහරුවාදා',
+                timeHighlight: 'පූර්ව භාග 10.41 ට',
+                targetTime: new Date('2026-04-14T10:41:00+05:30').getTime(),
+                description: 'රක්ත වර්ණ වස්ත්‍රාභරණයෙන් සැරසී දකුණු දිශාව බලා ලිප් බැඳ ගිනි මොලවා කිරි බතක්ද, කැවිලි වර්ගයක්ද, දී කිරි සහ විළඳ ද, පිළියෙල කර ගැනීම මැනවි.',
+                icon: '🔥'
+            },
+            {
+                id: 'work-eat',
+                title: 'වැඩ ඇල්ලීම, ගනුදෙනු කිරීම හා ආහාර අනුභවය',
+                dateHighlight: 'අප්‍රේල් මස 14 වැනි අඟහරුවාදා',
+                timeHighlight: 'අපර භාග 12.05 ට',
+                targetTime: new Date('2026-04-14T12:05:00+05:30').getTime(),
+                description: 'රක්ත වර්ණ වස්ත්‍රාභරණයෙන් සැරසී දකුණු දිශාව බලා සියලු වැඩ අල්ලා ගනුදෙනු කොට ආහාර අනුභවය කිරීම මැනවි.',
+                icon: '🤝'
+            },
+            {
+                id: 'anointing',
+                title: 'හිසතෙල් ගෑම',
+                dateHighlight: 'අප්‍රේල් මස 15 වැනි බදාදා',
+                timeHighlight: 'පූර්ව භාග 06.54 ට',
+                targetTime: new Date('2026-04-15T06:54:00+05:30').getTime(),
+                description: 'නැගෙනහිර දිශාව බලා හිසට කොහොඹ පත්ද, පයට කොළොන් පත් ද තබා පච්ච වර්ණ වස්ත්‍රාභරණයෙන් සැරසී කොහොඹ පත් යුෂ මිශ්‍ර නානු හා තෙල් ගා ස්නානය කිරීම මැනවි.',
+                icon: '💆'
+            },
+            {
+                id: 'leave-work',
+                title: 'රැකී රක්ෂා සඳහා පිටත්ව යාම',
+                dateHighlight: 'අප්‍රේල් මස 20 වැනි සඳුදා',
+                timeHighlight: 'පූර්ව භාග 06.27 ට',
+                targetTime: new Date('2026-04-20T06:27:00+05:30').getTime(),
+                description: 'ශ්වේත වර්ණ වස්ත්‍රාභරණයෙන් සැරසී කිරිබත් සහ එළකිරි මිශ්‍ර කැවිලිද අනුභව කර දකුණු දිශාව බලා පිටත් වීම මැනවි.',
+                icon: '💼'
+            }
+        ];
+
+        // Format countdown string
+        function getCountdownValues(distance) {
+            if (distance < 0) return null;
+            return {
+                days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+                hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+                seconds: Math.floor((distance % (1000 * 60)) / 1000)
+            };
+        }
+
+        // Generate Grid Cards
+        const gridContainer = document.getElementById('events-grid');
+        let cardElements = {};
+
+        events.forEach(event => {
+            if(event.isMain) return; // Handled separately
+
+            const card = document.createElement('div');
+            card.className = "bg-white rounded-2xl shadow-lg border-t-4 border-ausp-red p-6 card-hover flex flex-col h-full relative overflow-hidden";
+            
+            card.innerHTML = `
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="text-3xl">${event.icon}</div>
+                    <h3 class="font-title text-2xl text-ausp-red font-bold leading-tight">${event.title}</h3>
+                </div>
+                
+                <div class="mb-4">
+                    <div class="text-gray-800 font-bold text-lg mb-1">${event.dateHighlight}</div>
+                    <div class="inline-block bg-yellow-100 text-ausp-red border border-yellow-300 font-bold px-3 py-1 rounded-md text-md shadow-sm">
+                        ${event.timeHighlight}
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 leading-relaxed flex-grow text-sm md:text-base">${event.description}</p>
+                
+                <div class="mt-5 pt-4 border-t border-gray-100">
+                    <div id="timer-${event.id}" class="text-center font-bold text-sm bg-gray-50 rounded-lg py-2 text-ausp-green border border-gray-200">
+                        ගණනය කරමින්...
+                    </div>
+                </div>
+            `;
+            gridContainer.appendChild(card);
+            cardElements[event.id] = document.getElementById(`timer-${event.id}`);
+        });
+
+        // The Main Event setup
+        const mainEvent = events.find(e => e.isMain);
+        const mainTimerContainer = document.getElementById('main-countdown');
+
+        function createMainTimeBox(value, label) {
+            return `
+                <div class="timer-box w-20 h-24 md:w-28 md:h-32 flex flex-col items-center justify-center rounded-xl md:rounded-2xl border-b-4 border-ausp-gold">
+                    <span class="text-3xl md:text-5xl font-black text-ausp-red">${value.toString().padStart(2, '0')}</span>
+                    <span class="text-xs md:text-sm font-bold text-gray-500 mt-1 uppercase">${label}</span>
+                </div>
+            `;
+        }
+
+        // Update loop
+        function updateAllTimers() {
+            const now = new Date().getTime();
+
+            // Update Main Event
+            const mainDistance = mainEvent.targetTime - now;
+            const mainVals = getCountdownValues(mainDistance);
+            
+            if (mainVals) {
+                mainTimerContainer.innerHTML = 
+                    createMainTimeBox(mainVals.days, 'දින') +
+                    createMainTimeBox(mainVals.hours, 'පැය') +
+                    createMainTimeBox(mainVals.minutes, 'මිනිත්තු') +
+                    createMainTimeBox(mainVals.seconds, 'තත්පර');
+            } else {
+                mainTimerContainer.innerHTML = `<div class="text-2xl font-bold text-ausp-green p-4 bg-green-50 rounded-xl w-full border border-green-200">සුබ අලුත් අවුරුද්දක් වේවා! (මෙම නැකත පසු විය)</div>`;
+            }
+
+            // Update Grid Cards
+            events.forEach(event => {
+                if(event.isMain) return;
+                
+                const el = cardElements[event.id];
+                const distance = event.targetTime - now;
+                const vals = getCountdownValues(distance);
+
+                if (vals) {
+                    el.innerHTML = `තවත්: ${vals.days}d ${vals.hours}h ${vals.minutes}m ${vals.seconds}s`;
+                    el.className = "text-center font-bold text-sm bg-gray-50 rounded-lg py-2 text-ausp-red border border-gray-200";
+                } else {
+                    el.innerHTML = `මෙම නැකත පසු විය`;
+                    el.className = "text-center font-bold text-sm bg-green-50 rounded-lg py-2 text-ausp-green border border-green-200";
+                }
+            });
+        }
+
+        // Initialize and start interval
+        updateAllTimers();
+        setInterval(updateAllTimers, 1000);
+
+    </script>
+</body>
+</html>
