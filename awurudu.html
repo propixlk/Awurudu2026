@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 අලුත් අවුරුදු නැකැත් සීට්ටුව</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Sinhala:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif Sinhala', serif;
+            background-color: #fff8e7;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e6d5a7' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .sun-animation {
+            animation: spin-slow 24s linear infinite;
+        }
+
+        @keyframes spin-slow {
+            100% { transform: rotate(360deg); }
+        }
+
+        .card-traditional {
+            background: #ffffff;
+            border: 1px solid #eab308;
+            box-shadow: 0 10px 15px -3px rgba(217, 119, 6, 0.1), 0 4px 6px -2px rgba(217, 119, 6, 0.05);
+            border-top: 5px solid #b45309;
+        }
+
+        .highlight-time {
+            background-color: #fee2e2;
+            color: #991b1b;
+            padding: 0.25rem 0.6rem;
+            border-radius: 0.375rem;
+            font-weight: 700;
+            display: inline-block;
+            border: 1px solid #f87171;
+        }
+
+        .header-bg {
+            background: linear-gradient(135deg, #780000 0%, #c1121f 50%, #d62828 100%);
+        }
+
+        .date-badge {
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid #f59e0b;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen pb-12">
+
+    <!-- Header Section -->
+    <header class="header-bg text-white py-10 px-4 relative overflow-hidden shadow-xl rounded-b-3xl mb-10">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="flex justify-center mb-4">
+                <svg class="sun-animation w-28 h-28 text-yellow-400" viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="20" fill="#facc15"/>
+                    <path d="M50 10 L50 20 M50 80 L50 90 M10 50 L20 50 M80 50 L90 50 M21.7 21.7 L28.8 28.8 M71.2 71.2 L78.3 78.3 M21.7 78.3 L28.8 71.2 M71.2 28.8 L78.3 21.7" stroke="#facc15" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black mb-2 tracking-wide" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">2026 අලුත් අවුරුදු නැකැත් සීට්ටුව</h1>
+            <p class="text-yellow-200 text-lg md:text-xl font-semibold mt-4">සූර්යයා මීන රාශියෙන් මේෂ රාශියට සංක්‍රමණය වන සූර්ය මංගල්‍යය</p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4" id="events-container">
+        <!-- Events rendered here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 text-center text-amber-800 text-sm font-semibold bg-[#fffcf5] py-8 border-t border-amber-200 shadow-inner">
+        
+        <p class="mt-2 text-2xl text-amber-700 font-black tracking-wide">සුභ අලුත් අවුරුද්දක් වේවා!</p>
+        
+        <div class="mt-6 pt-4 border-t border-amber-200/60 max-w-lg mx-auto">
+            <p class="text-gray-700 font-bold"></p>
+            <p class="text-gray-500 text-xs mt-1 tracking-wider uppercase"><a href="https://propix.work.gd/"> Propix LK | Your Graphic Design Partner!</a> </p>
+        </div>
+    </footer>
+
+    <script>
+        const events = [
+            {
+                id: 1,
+                title: "නව සඳ බැලීම (අභිනව චන්ද්‍ර වර්ෂය සඳහා)",
+                dateStr: "2026 මාර්තු 20",
+                dayStr: "සිකුරාදා",
+                timestamp: "2026-03-20T18:30:00+05:30",
+                desc: "අභිනව චන්ද්‍ර වර්ෂය සඳහා මාර්තු මස 20 වන සිකුරාදා දින නව සඳ බැලීම මැනවි.",
+                highlightTime: "සිකුරාදා දින",
+                icon: "🌙"
+            },
+            {
+                id: 2,
+                title: "පරණ අවුරුද්ද සඳහා ස්නානය",
+                dateStr: "2026 අප්‍රේල් 13",
+                dayStr: "සඳුදා",
+                timestamp: "2026-04-13T06:00:00+05:30",
+                desc: "අප්‍රේල් මස 13 වැනි සඳුදා දින දිවුල් පත් යුෂ මිශ්‍ර නානු ගා ස්නානය කොට ඉෂ්ට දේවතා අනුස්මරණයේ යෙදී වාසය මැනවි.",
+                highlightTime: "සඳුදා දින",
+                icon: "🌿"
+            },
+            {
+                id: 3,
+                title: "පුණ්‍ය කාලය",
+                dateStr: "2026 අප්‍රේල් 14",
+                dayStr: "අඟහරුවාදා",
+                timestamp: "2026-04-14T03:08:00+05:30",
+                desc: "අප්‍රේල් මස 14 වැනි අඟහරුවාදා පූර්ව භාග 03.08 සිට එදිනම අපර භාග 03.56 දක්වා පුණ්‍ය කාලය බැවින්, පූර්ව භාග 03.08 ට පළමුව ආහාර පාන ගෙන සියලු වැඩ අතහැර ආගමික වතාවත්වල යෙදීම මැනවි.",
+                highlightTime: "පෙ.ව. 03.08 සිට",
+                icon: "🙏"
+            },
+            {
+                id: 4,
+                title: "අලුත් අවුරුදු උදාව",
+                dateStr: "2026 අප්‍රේල් 14",
+                dayStr: "අඟහරුවාදා",
+                timestamp: "2026-04-14T09:32:00+05:30",
+                desc: "අප්‍රේල් මස 14 වැනි අඟහරුවාදා පූර්ව භාග 09.32 ට සිංහල අලුත් අවුරුද්ද උදාවේ.",
+                highlightTime: "පෙ.ව. 09.32 ට",
+                icon: "🌅"
+            },
+            {
+                id: 5,
+                title: "ආහාර පිසීම",
+                dateStr: "2026 අප්‍රේල් 14",
+                dayStr: "අඟහරුවාදා",
+                timestamp: "2026-04-14T10:41:00+05:30",
+                desc: "අප්‍රේල් මස 14 වැනි අඟහරුවාදා පූර්ව භාග 10.41 ට රක්ත වර්ණ (රතු) වස්ත්‍රාභරණයෙන් සැරසී දකුණු දිශාව බලා ලිප් බැඳ ගිනි මොලවා, කිරි බතක් ද, කැවිලි වර්ගයක් ද, දී කිරි සහ විළඳ ද පිළියෙළ කර ගැනීම මැනවි.",
+                highlightTime: "පෙ.ව. 10.41 ට",
+                direction: "දකුණු දිශාව",
+                colorText: "රක්ත වර්ණ (රතු)",
+                colorCode: "#ef4444",
+                icon: "🔥"
+            },
+            {
+                id: 6,
+                title: "වැඩ ඇල්ලීම, ගනුදෙනු කිරීම හා ආහාර අනුභවය",
+                dateStr: "2026 අප්‍රේල් 14",
+                dayStr: "අඟහරුවාදා",
+                timestamp: "2026-04-14T12:05:00+05:30",
+                desc: "අප්‍රේල් මස 14 වැනි අඟහරුවාදා අපර භාග 12.05 ට රක්ත වර්ණ (රතු) වස්ත්‍රාභරණයෙන් සැරසී දකුණු දිශාව බලා සියලු වැඩ අල්ලා ගනුදෙනු කොට ආහාර අනුභවය කිරීම මැනවි.",
+                highlightTime: "ප.ව. 12.05 ට",
+                direction: "දකුණු දිශාව",
+                colorText: "රක්ත වර්ණ (රතු)",
+                colorCode: "#ef4444",
+                icon: "🤝"
+            },
+            {
+                id: 7,
+                title: "හිසතෙල් ගෑම",
+                dateStr: "2026 අප්‍රේල් 15",
+                dayStr: "බදාදා",
+                timestamp: "2026-04-15T06:54:00+05:30",
+                desc: "අප්‍රේල් මස 15 වැනි බදාදා පූර්ව භාග 06.54 ට නැගෙනහිර දිශාව බලා හිසට කොහොඹ පත් ද, පයට කොලොන් පත් ද තබා පංච වර්ණ වස්ත්‍රාභරණයෙන් සැරසී කොහොඹ පත් යුෂ මිශ්‍ර නානු හා තෙල් ගා ස්නානය කිරීම මැනවි.",
+                highlightTime: "පෙ.ව. 06.54 ට",
+                direction: "නැගෙනහිර දිශාව",
+                colorText: "පංච වර්ණ",
+                colorCode: "linear-gradient(to right, #ef4444, #eab308, #22c55e, #3b82f6, #a855f7)",
+                icon: "🧴"
+            },
+            {
+                id: 8,
+                title: "නව සඳ බැලීම (අභිනව සූර්ය වර්ෂය සඳහා)",
+                dateStr: "2026 අප්‍රේල් 19",
+                dayStr: "ඉරිදා",
+                timestamp: "2026-04-19T18:30:00+05:30",
+                desc: "අභිනව සූර්ය වර්ෂය සඳහා අප්‍රේල් මස 19 වන ඉරිදා දින නව සඳ බැලීම මැනවි.",
+                highlightTime: "ඉරිදා දින",
+                icon: "🌘"
+            },
+            {
+                id: 9,
+                title: "රැකී රක්ෂා සඳහා පිටත්ව යාම",
+                dateStr: "2026 අප්‍රේල් 20",
+                dayStr: "සඳුදා",
+                timestamp: "2026-04-20T06:27:00+05:30",
+                desc: "අප්‍රේල් මස 20 වැනි සඳුදා පූර්ව භාග 06.27 ට ශ්වේත වර්ණ (සුදු) වස්ත්‍රාභරණයෙන් සැරසී කිරි බත් සහ එළකිරි මිශ්‍ර කැවිලි ද අනුභව කර දකුණු දිශාව බලා පිටත්ව යාම මැනවි.",
+                highlightTime: "පෙ.ව. 06.27 ට",
+                direction: "දකුණු දිශාව",
+                colorText: "ශ්වේත වර්ණ (සුදු)",
+                colorCode: "#ffffff",
+                hasBorder: true,
+                icon: "💼"
+            }
+        ];
+
+        const container = document.getElementById('events-container');
+
+        function renderEvents() {
+            events.forEach((ev) => {
+                let colorBadge = '';
+                if (ev.colorText) {
+                    let styleAttr = ev.colorCode.includes('gradient') 
+                        ? `background: ${ev.colorCode};` 
+                        : `background-color: ${ev.colorCode};`;
+                    let borderClass = ev.hasBorder ? 'border border-gray-400' : '';
+                    colorBadge = `
+                        <div class="flex items-center gap-2 mt-3 bg-gray-50 px-3 py-2 rounded-lg border border-gray-200 w-fit">
+                            <span class="text-sm font-bold text-gray-700">වර්ණය:</span>
+                            <div class="w-5 h-5 rounded-full shadow-sm ${borderClass}" style="${styleAttr}"></div>
+                            <span class="text-sm font-semibold">${ev.colorText}</span>
+                        </div>
+                    `;
+                }
+
+                let directionBadge = '';
+                if (ev.direction) {
+                    directionBadge = `
+                        <div class="flex items-center gap-2 mt-2 bg-amber-50 px-3 py-2 rounded-lg border border-amber-200 w-fit">
+                            <span class="text-sm font-bold text-amber-900">දිශාව:</span>
+                            <span class="text-sm font-semibold text-amber-800">${ev.direction}</span>
+                        </div>
+                    `;
+                }
+
+                const cardHTML = `
+                    <div class="card-traditional rounded-2xl p-5 md:p-6 mb-8 relative transition-transform hover:-translate-y-1 duration-300">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-1">
+                                    <span class="text-3xl">${ev.icon}</span>
+                                    <h2 class="text-xl md:text-2xl font-black text-amber-900">${ev.title}</h2>
+                                </div>
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span class="date-badge">${ev.dateStr} ${ev.dayStr}</span>
+                                    <span class="text-lg font-bold">| වේලාව: <span class="highlight-time">${ev.highlightTime}</span></span>
+                                </div>
+                                <p class="text-gray-700 text-justify leading-relaxed">${ev.desc}</p>
+                                <div class="flex flex-wrap gap-3 mt-2">
+                                    ${directionBadge}
+                                    ${colorBadge}
+                                </div>
+                            </div>
+
+                            <div class="md:w-64 bg-stone-50 rounded-xl p-4 border border-stone-200 flex flex-col items-center justify-center shadow-inner">
+                                <p class="text-sm font-bold text-stone-500 mb-2 uppercase tracking-wider">ඉතිරි කාලය</p>
+                                <div class="flex gap-2 text-center w-full justify-center" id="countdown-${ev.id}">
+                                    <div class="flex-1 bg-white border border-stone-200 rounded shadow-sm py-2">
+                                        <div class="text-xl md:text-2xl font-black text-amber-600" id="d-${ev.id}">00</div>
+                                        <div class="text-[10px] text-gray-500 font-bold">දින</div>
+                                    </div>
+                                    <div class="flex-1 bg-white border border-stone-200 rounded shadow-sm py-2">
+                                        <div class="text-xl md:text-2xl font-black text-amber-600" id="h-${ev.id}">00</div>
+                                        <div class="text-[10px] text-gray-500 font-bold">පැය</div>
+                                    </div>
+                                    <div class="flex-1 bg-white border border-stone-200 rounded shadow-sm py-2">
+                                        <div class="text-xl md:text-2xl font-black text-amber-600" id="m-${ev.id}">00</div>
+                                        <div class="text-[10px] text-gray-500 font-bold">මිනිත්තු</div>
+                                    </div>
+                                    <div class="flex-1 bg-white border border-stone-200 rounded shadow-sm py-2">
+                                        <div class="text-xl md:text-2xl font-black text-red-500" id="s-${ev.id}">00</div>
+                                        <div class="text-[10px] text-gray-500 font-bold">තත්පර</div>
+                                    </div>
+                                </div>
+                                <div id="msg-${ev.id}" class="hidden mt-3 text-green-600 font-bold text-sm bg-green-100 px-3 py-1 rounded w-full text-center">
+                                    නැකැත් වේලාව එළඹ ඇත
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        function updateCountdowns() {
+            const now = new Date().getTime();
+            events.forEach(ev => {
+                const eventTime = new Date(ev.timestamp).getTime();
+                const distance = eventTime - now;
+                const countdownEl = document.getElementById(`countdown-${ev.id}`);
+                const msgEl = document.getElementById(`msg-${ev.id}`);
+
+                if (distance < 0) {
+                    if (countdownEl) countdownEl.style.display = 'none';
+                    if (msgEl) msgEl.classList.remove('hidden');
+                } else {
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById(`d-${ev.id}`).innerText = days.toString().padStart(2, '0');
+                    document.getElementById(`h-${ev.id}`).innerText = hours.toString().padStart(2, '0');
+                    document.getElementById(`m-${ev.id}`).innerText = minutes.toString().padStart(2, '0');
+                    document.getElementById(`s-${ev.id}`).innerText = seconds.toString().padStart(2, '0');
+                }
+            });
+        }
+
+        renderEvents();
+        updateCountdowns();
+        setInterval(updateCountdowns, 1000);
+    </script>
+</body>
+</html>

@@ -1,798 +1,473 @@
 <!DOCTYPE html>
-<html lang="si">
+<html lang="si" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>අලුත් අවුරුදු නැකැත් සීට්ටුව 2026 | Gammadda</title>
-<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Noto+Sans+Sinhala:wght@300;400;600;700;900&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --gold: #f0a500;
-  --gold-light: #ffd700;
-  --gold-pale: #fff3c4;
-  --crimson: #c0392b;
-  --deep-red: #7f1d1d;
-  --orange: #e85d04;
-  --saffron: #f48c06;
-  --cream: #fdf6e3;
-  --dark: #0d0500;
-  --dark2: #1a0800;
-  --dark3: #2d1200;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 අලුත් අවුරුදු නැකැත් සීට්ටුව</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Sinhala:wght@400;600;700;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #c1121f;
+            --dark-red: #780000;
+            --gold: #fdf0d5;
+        }
 
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Noto Serif Sinhala', serif;
+            background-color: #fffaf0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e6d5a7' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            overflow-x: hidden;
+        }
 
-body {
-  background: var(--dark);
-  font-family: 'Noto Sans Sinhala', sans-serif;
-  overflow-x: hidden;
-  color: #3d1a00;
-}
+        .font-number {
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        .sun-animation {
+            animation: spin-slow 24s linear infinite;
+        }
 
-/* ── FIXED BACKGROUND ── */
-#bg-canvas {
-  position: fixed;
-  inset: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
+        @keyframes spin-slow {
+            100% { transform: rotate(360deg); }
+        }
 
-/* ── FLOATING PETALS ── */
-#petals {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
-.petal {
-  position: absolute;
-  bottom: -40px;
-  animation: riseUp linear infinite;
-  opacity: 0;
-  pointer-events: none;
-}
-@keyframes riseUp {
-  0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
-  8%   { opacity: 0.85; }
-  92%  { opacity: 0.5; }
-  100% { transform: translateY(-110vh) rotate(520deg); opacity: 0; }
-}
+        .hero-bg {
+            background: linear-gradient(135deg, var(--dark-red) 0%, var(--primary-red) 50%, #d62828 100%);
+            position: relative;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
 
-/* ═══════════════════════════════════
-   HERO
-═══════════════════════════════════ */
-.hero {
-  position: relative;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  padding: 2rem 1.5rem 5rem;
-  background: radial-gradient(ellipse 130% 80% at 50% 15%, #3d1200 0%, #1a0600 55%, #0d0400 100%);
-}
+        /* Glassmorphism main countdown */
+        .glass-countdown {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 20px rgba(234, 179, 8, 0.2);
+        }
 
-/* Sun */
-.sun-container {
-  position: relative;
-  width: clamp(100px, 22vw, 155px);
-  height: clamp(100px, 22vw, 155px);
-  flex-shrink: 0;
-  margin-bottom: 1.2rem;
-}
-.sun-svg {
-  width: 100%; height: 100%;
-  animation: sunSpin 28s linear infinite;
-  filter: drop-shadow(0 0 16px #ffd700) drop-shadow(0 0 36px #f59e0b88);
-}
-@keyframes sunSpin { to { transform: rotate(360deg); } }
-.sun-core {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
-  width: 40%; height: 40%;
-  border-radius: 50%;
-  background: radial-gradient(circle at 38% 35%, #fffde0, #ffe066 40%, #ffa500 80%, #ff6600);
-  box-shadow: 0 0 20px 8px #ffd700, 0 0 50px 20px #f59e0b88, 0 0 90px 35px #ea580c55;
-  animation: corePulse 2.5s ease-in-out infinite;
-  z-index: 10;
-}
-@keyframes corePulse {
-  0%,100% { box-shadow: 0 0 20px 8px #ffd700, 0 0 50px 20px #f59e0b88, 0 0 90px 35px #ea580c55; }
-  50%      { box-shadow: 0 0 35px 14px #ffd700, 0 0 80px 30px #f59e0baa, 0 0 130px 55px #ea580c88; }
-}
+        /* Card styles & hover effects */
+        .nekath-card {
+            background: #ffffff;
+            border-radius: 1.25rem;
+            border: 1px solid #fde68a;
+            box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.08), 0 8px 10px -6px rgba(217, 119, 6, 0.04);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nekath-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #f59e0b, #ef4444);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
 
-/* Hero text */
-.hero-brand {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: clamp(0.65rem, 2vw, 1rem);
-  color: var(--gold);
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
-  margin-bottom: 0.45rem;
-  opacity: 0.9;
-  animation: fadeD 0.9s 0.1s both;
-}
-.hero-title {
-  font-family: 'Yatra One', cursive;
-  font-size: clamp(1.55rem, 6vw, 3.8rem);
-  background: linear-gradient(135deg, #ffd700 0%, #ff8800 50%, #ffd700 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.25;
-  text-align: center;
-  filter: drop-shadow(0 2px 10px #f59e0b55);
-  animation: fadeD 0.9s 0.25s both;
-}
-.hero-year {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: clamp(2.2rem, 7.5vw, 4.5rem);
-  color: #fff;
-  text-shadow: 0 0 25px #ffd700, 0 0 60px #f59e0b, 0 0 100px #ea580c44;
-  line-height: 1;
-  margin: 0.15rem 0 0.1rem;
-  animation: fadeD 0.9s 0.4s both;
-}
-.hero-sub {
-  font-family: 'Yatra One', cursive;
-  font-size: clamp(0.75rem, 2.5vw, 1.15rem);
-  color: #ffd59d;
-  letter-spacing: 0.1em;
-  margin-bottom: 1.6rem;
-  animation: fadeD 0.9s 0.55s both;
-}
+        .nekath-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -5px rgba(217, 119, 6, 0.15);
+            border-color: #f59e0b;
+        }
 
-/* Hero main countdown */
-.mcd-wrap { text-align: center; animation: fadeD 0.9s 0.7s both; }
-.mcd-title {
-  font-family: 'Yatra One', cursive;
-  font-size: clamp(0.7rem, 2.2vw, 0.95rem);
-  color: rgba(255,213,120,0.82);
-  margin-bottom: 0.7rem;
-}
-.mcd-row {
-  display: flex;
-  gap: clamp(0.38rem, 2vw, 1rem);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.mcd-box {
-  position: relative;
-  background: linear-gradient(150deg, rgba(255,215,0,0.16), rgba(255,100,0,0.09));
-  border: 1.5px solid rgba(255,215,0,0.38);
-  border-radius: 14px;
-  padding: clamp(0.5rem,2vw,0.85rem) clamp(0.65rem,3vw,1.35rem);
-  min-width: clamp(56px,14vw,88px);
-  backdrop-filter: blur(12px);
-  overflow: hidden;
-}
-.mcd-box::before {
-  content:''; position:absolute; top:0; left:0; right:0; height:1px;
-  background: linear-gradient(90deg, transparent, rgba(255,215,0,0.7), transparent);
-}
-.mcd-num {
-  display: block;
-  font-family: 'Cinzel Decorative', serif;
-  font-size: clamp(1.5rem, 5.5vw, 2.8rem);
-  color: #ffd700;
-  text-shadow: 0 0 14px #ffd700, 0 0 28px #f59e0b;
-  line-height: 1;
-}
-.mcd-lbl {
-  display: block;
-  font-size: clamp(0.48rem, 1.5vw, 0.6rem);
-  color: rgba(255,215,145,0.78);
-  margin-top: 0.28rem;
-}
+        .nekath-card:hover::before {
+            transform: scaleX(1);
+        }
 
-.scroll-cue {
-  position: absolute;
-  bottom: 1.6rem; left: 50%;
-  transform: translateX(-50%);
-  display: flex; flex-direction:column; align-items:center; gap:0.3rem;
-  color: rgba(255,210,100,0.45);
-  font-size: 0.62rem;
-  font-family: 'Yatra One', cursive;
-  animation: bounce 2s ease-in-out infinite;
-  z-index: 3;
-}
-.scroll-cue svg { width:22px; height:22px; }
-@keyframes bounce {
-  0%,100%{ opacity:.4; transform:translateX(-50%) translateY(0); }
-  50%    { opacity:.85; transform:translateX(-50%) translateY(7px); }
-}
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
 
-/* ═══════════════════════════════════
-   EVENTS SECTION
-═══════════════════════════════════ */
-.events-section {
-  position: relative;
-  z-index: 2;
-  padding: 0 1rem 5rem;
-  background: linear-gradient(180deg,
-    #0d0400 0%, #1e0900 18%, #2d1000 50%, #1e0900 82%, #0d0400 100%
-  );
-}
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-.ornament {
-  display: flex; align-items:center; gap:0.8rem;
-  max-width: 580px; margin: 0 auto 1.8rem;
-  padding: 2rem 1.5rem 0;
-}
-.orn-line {
-  flex:1; height:2px; border-radius:2px;
-  background: linear-gradient(90deg, transparent, var(--gold) 40%, var(--gold) 60%, transparent);
-}
-.orn-center { display:flex; align-items:center; gap:0.4rem; font-size:1.5rem; }
-.orn-diamond {
-  width:8px; height:8px;
-  background: var(--gold); transform:rotate(45deg);
-  box-shadow: 0 0 8px var(--gold);
-}
-
-.section-heading {
-  text-align: center;
-  font-family: 'Yatra One', cursive;
-  font-size: clamp(1.25rem, 4vw, 2rem);
-  color: var(--gold);
-  text-shadow: 0 0 22px var(--gold);
-  margin-bottom: 2.5rem;
-  padding: 0 1rem;
-}
-
-/* ═══════════════════════════════════
-   CARDS
-═══════════════════════════════════ */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
-  gap: 2rem;
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-.ecard {
-  position: relative;
-  border-radius: 22px;
-  overflow: hidden;
-  background: linear-gradient(150deg, #fffbf0 0%, #fdf6dc 45%, #fff8e8 100%);
-  box-shadow:
-    0 2px 0 rgba(255,215,0,0.28),
-    0 8px 28px rgba(0,0,0,0.38),
-    0 0 0 1.5px rgba(240,165,0,0.22),
-    inset 0 1px 0 rgba(255,255,255,0.92);
-  transition: transform 0.38s cubic-bezier(.22,.68,0,1.2), box-shadow 0.35s ease;
-  opacity: 0;
-  transform: translateY(45px) scale(0.98);
-}
-.ecard.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(.22,.68,0,1.2);
-}
-.ecard:hover {
-  transform: translateY(-8px) scale(1.016);
-  box-shadow:
-    0 2px 0 rgba(255,215,0,0.5),
-    0 22px 55px rgba(0,0,0,0.45),
-    0 0 0 2px rgba(240,165,0,0.38),
-    0 0 45px rgba(240,165,0,0.1);
-}
-
-/* ── Card header strip ── */
-.ecard-head {
-  position: relative;
-  background: linear-gradient(130deg, #7b0000 0%, #bf2111 45%, #8b1010 100%);
-  padding: 1rem 1.1rem 1rem 1rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-  overflow: hidden;
-}
-.ecard-head::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255,215,0,0.045) 0, rgba(255,215,0,0.045) 1px,
-    transparent 1px, transparent 13px
-  );
-}
-.ecard-head::after {
-  content: '';
-  position: absolute; bottom:0; left:0; right:0; height:2.5px;
-  background: linear-gradient(90deg, transparent, var(--gold) 25%, var(--gold-light) 50%, var(--gold) 75%, transparent);
-}
-
-/* Mini sun in card header */
-.csun {
-  position: relative;
-  flex-shrink: 0;
-  width: 44px; height: 44px;
-  margin-top: 2px;
-}
-.csun-svg {
-  width: 100%; height: 100%;
-  animation: sunSpin 10s linear infinite;
-  filter: drop-shadow(0 0 4px #ffd700);
-}
-.csun-core {
-  position: absolute;
-  top:50%; left:50%;
-  transform: translate(-50%,-50%);
-  width: 38%; height: 38%;
-  border-radius: 50%;
-  background: radial-gradient(circle, #fffbc0, #ffd700 55%, #ff8800);
-  animation: corePulse 2s ease-in-out infinite;
-}
-
-.card-text-wrap {}
-.card-title {
-  font-family: 'Yatra One', cursive;
-  font-size: clamp(0.92rem, 2.8vw, 1.12rem);
-  color: #ffd700;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
-  line-height: 1.38;
-  position: relative; z-index: 1;
-}
-.card-num {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 0.56rem;
-  color: rgba(255,215,0,0.5);
-  letter-spacing: 0.2em;
-  margin-top: 0.18rem;
-  position: relative; z-index: 1;
-}
-
-/* ── Card body ── */
-.ecard-body {
-  padding: 1.2rem 1.3rem 0.6rem;
-}
-.ecard-desc {
-  font-size: clamp(0.78rem, 2.2vw, 0.88rem);
-  line-height: 2.05;
-  color: #4a1e00;
-}
-
-/* Highlighted dates & times */
-.hl-date {
-  display: inline-block;
-  background: linear-gradient(135deg, #fef3c7, #fde68a);
-  color: #7c2d12;
-  font-weight: 700;
-  padding: 0.07em 0.42em;
-  border-radius: 6px;
-  border: 1px solid rgba(180,83,9,0.28);
-  font-size: 0.91em;
-  line-height: 1.5;
-  margin: 0.04em 0.04em;
-  box-shadow: 0 1px 4px rgba(180,83,9,0.12);
-}
-.hl-time {
-  display: inline-block;
-  background: linear-gradient(135deg, #fee2e2, #fca5a5);
-  color: #7f1d1d;
-  font-weight: 700;
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 0.87em;
-  padding: 0.07em 0.48em;
-  border-radius: 6px;
-  border: 1px solid rgba(185,28,28,0.22);
-  line-height: 1.5;
-  margin: 0.04em 0.04em;
-  box-shadow: 0 1px 4px rgba(185,28,28,0.13);
-}
-
-/* ── Per-card countdown ── */
-.ecard-cd {
-  margin: 1rem 0 1.15rem;
-  background: linear-gradient(135deg, rgba(139,0,0,0.055), rgba(232,93,4,0.035));
-  border: 1.5px solid rgba(192,57,43,0.18);
-  border-radius: 14px;
-  padding: 0.85rem 0.95rem;
-  position: relative;
-  overflow: hidden;
-}
-.ecard-cd::before {
-  content: '';
-  position: absolute; top:0; left:0; right:0; height:1.5px;
-  background: linear-gradient(90deg, transparent, rgba(192,57,43,0.45), transparent);
-}
-.ecd-label {
-  font-family: 'Yatra One', cursive;
-  font-size: 0.65rem;
-  color: var(--deep-red);
-  text-align: center;
-  margin-bottom: 0.65rem;
-  opacity: 0.78;
-  letter-spacing: 0.03em;
-}
-.ecd-boxes {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 0.42rem;
-}
-.ecd-unit {
-  background: #fff;
-  border-radius: 10px;
-  padding: 0.42rem 0.18rem 0.32rem;
-  text-align: center;
-  border: 1px solid rgba(192,57,43,0.1);
-  box-shadow: 0 2px 7px rgba(0,0,0,0.07), inset 0 1px 0 rgba(255,255,255,0.95);
-  position: relative; overflow: hidden;
-}
-.ecd-unit::after {
-  content:''; position:absolute; top:48%; left:0; right:0; height:1px;
-  background: rgba(192,57,43,0.07);
-}
-.ecd-n {
-  display: block;
-  font-family: 'Cinzel Decorative', serif;
-  font-size: clamp(1rem, 3.5vw, 1.3rem);
-  color: var(--crimson);
-  font-weight: 700;
-  line-height: 1.1;
-}
-.ecd-l {
-  display: block;
-  font-size: 0.49rem;
-  color: #92400e;
-  margin-top: 0.24rem;
-}
-.ecd-done {
-  grid-column: 1/-1;
-  text-align: center;
-  padding: 0.4rem;
-  font-family: 'Yatra One', cursive;
-  font-size: 0.8rem;
-  color: var(--crimson);
-}
-
-/* Card bottom gold bar */
-.ecard-bar {
-  height: 5px;
-  background: linear-gradient(90deg,
-    transparent 0%, var(--gold) 20%, var(--gold-light) 50%, var(--gold) 80%, transparent 100%
-  );
-  opacity: 0.68;
-}
-
-/* ═══════════════════════════════════
-   FOOTER
-═══════════════════════════════════ */
-.footer {
-  position: relative; z-index: 2;
-  background: #080200;
-  text-align: center;
-  padding: 2rem 1rem 1.5rem;
-  border-top: 1px solid rgba(240,165,0,0.1);
-  color: rgba(255,215,0,0.42);
-  font-size: 0.76rem;
-}
-.footer strong { color: var(--gold); }
-
-/* ── Animations ── */
-@keyframes fadeD {
-  from { opacity:0; transform:translateY(-18px); }
-  to   { opacity:1; transform:translateY(0); }
-}
-</style>
+        /* Custom pulsing for the main countdown numbers */
+        @keyframes subtle-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        .pulse-number {
+            animation: subtle-pulse 2s infinite;
+        }
+    </style>
 </head>
-<body>
+<body class="text-gray-800 antialiased min-h-screen pb-12">
 
-<canvas id="bg-canvas"></canvas>
-<div id="petals"></div>
+    <!-- Header Section -->
+    <header class="hero-bg text-white pt-12 pb-32 px-4 relative shadow-xl rounded-b-[2.5rem] lg:rounded-b-[4rem] mb-8">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="flex justify-center mb-6">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-yellow-400 rounded-full blur-xl opacity-40 animate-pulse"></div>
+                    <svg class="sun-animation w-24 h-24 md:w-32 md:h-32 text-yellow-400 relative z-10" viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="22" fill="#facc15"/>
+                        <path d="M50 8 L50 18 M50 82 L50 92 M8 50 L18 50 M82 50 L92 50 M20 20 L28 28 M72 72 L80 80 M20 80 L28 72 M72 28 L80 20" stroke="#facc15" stroke-width="7" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black mb-3 tracking-wide" style="text-shadow: 2px 4px 8px rgba(0,0,0,0.4);">
+                2026 අලුත් අවුරුදු <span class="text-yellow-300">නැකැත්</span>
+            </h1>
+            <p class="text-yellow-100/90 text-lg md:text-2xl font-semibold mt-4 max-w-2xl mx-auto leading-relaxed">
+                සූර්යයා මීන රාශියෙන් මේෂ රාශියට සංක්‍රමණය වන සූර්ය මංගල්‍යය
+            </p>
+        </div>
+    </header>
 
-<!-- ══════════ HERO ══════════ -->
-<section class="hero">
+    <!-- Main Countdown Section (Floating over the header) -->
+    <div class="max-w-4xl mx-auto px-4 relative z-20 -mt-28 mb-16">
+        <div class="glass-countdown rounded-3xl p-6 md:p-10 text-center transform hover:scale-[1.01] transition-transform duration-300">
+            <h2 class="text-xl md:text-3xl font-black text-red-700 mb-6 flex items-center justify-center gap-3">
+                <span class="text-2xl">🎇</span> අලුත් අවුරුදු උදාවට තව <span class="text-2xl">🎇</span>
+            </h2>
+            
+            <div id="main-countdown-container" class="grid grid-cols-4 gap-3 md:gap-6 max-w-3xl mx-auto">
+                <div class="bg-red-50 border-2 border-red-100 rounded-2xl p-3 md:p-6 shadow-inner">
+                    <div class="font-number pulse-number text-3xl md:text-6xl font-black text-red-600 mb-1" id="main-d">00</div>
+                    <div class="text-xs md:text-base font-bold text-red-800 uppercase tracking-widest">දින</div>
+                </div>
+                <div class="bg-orange-50 border-2 border-orange-100 rounded-2xl p-3 md:p-6 shadow-inner">
+                    <div class="font-number text-3xl md:text-6xl font-black text-orange-600 mb-1" id="main-h">00</div>
+                    <div class="text-xs md:text-base font-bold text-orange-800 uppercase tracking-widest">පැය</div>
+                </div>
+                <div class="bg-amber-50 border-2 border-amber-100 rounded-2xl p-3 md:p-6 shadow-inner">
+                    <div class="font-number text-3xl md:text-6xl font-black text-amber-600 mb-1" id="main-m">00</div>
+                    <div class="text-xs md:text-base font-bold text-amber-800 uppercase tracking-widest">මිනිත්තු</div>
+                </div>
+                <div class="bg-yellow-50 border-2 border-yellow-100 rounded-2xl p-3 md:p-6 shadow-inner relative overflow-hidden">
+                    <div class="font-number text-3xl md:text-6xl font-black text-yellow-600 mb-1" id="main-s">00</div>
+                    <div class="text-xs md:text-base font-bold text-yellow-800 uppercase tracking-widest">තත්පර</div>
+                </div>
+            </div>
 
-  <!-- Animated Sun -->
-  <div class="sun-container">
-    <svg class="sun-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.92"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(22.5 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.82" transform="rotate(45 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(67.5 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.92" transform="rotate(90 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(112.5 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.82" transform="rotate(135 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(157.5 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.92" transform="rotate(180 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(202.5 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.82" transform="rotate(225 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(247.5 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.92" transform="rotate(270 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(292.5 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffaa00" opacity="0.82" transform="rotate(315 80 80)"/>
-      <polygon points="80,3 83.5,56 76.5,56" fill="#ffd700" opacity="0.87" transform="rotate(337.5 80 80)"/>
-    </svg>
-    <div class="sun-core"></div>
-  </div>
-
-  <p class="hero-brand">✦ ගම්මැද්ද · Gammadda ✦</p>
-  <h1 class="hero-title">අලුත් අවුරුදු නැකැත් සීට්ටුව</h1>
-  <div class="hero-year">2026</div>
-  <p class="hero-sub">🌸 සිංහල හා දෙමළ නව වසර 🌸</p>
-
-  <div class="mcd-wrap">
-    <div class="mcd-title">⏳ අලුත් අවුරුදු උදාව දක්වා · April 14, 09:32</div>
-    <div class="mcd-row">
-      <div class="mcd-box"><span class="mcd-num" id="mD">00</span><span class="mcd-lbl">දිනයන්</span></div>
-      <div class="mcd-box"><span class="mcd-num" id="mH">00</span><span class="mcd-lbl">පැය</span></div>
-      <div class="mcd-box"><span class="mcd-num" id="mM">00</span><span class="mcd-lbl">මිනිත්තු</span></div>
-      <div class="mcd-box"><span class="mcd-num" id="mS">00</span><span class="mcd-lbl">තත්පර</span></div>
+            <div id="main-msg" class="hidden mt-6 text-2xl md:text-4xl font-black text-red-600 animate-bounce">
+                සුභ අලුත් අවුරුද්දක් වේවා! 🎉
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="scroll-cue">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
-    නැකැත් සීට්ටුව
-  </div>
-</section>
+    <!-- Events List -->
+    <main class="max-w-4xl mx-auto px-4" id="events-container">
+        <!-- Events rendered via JS -->
+    </main>
 
-<!-- ══════════ EVENTS ══════════ -->
-<section class="events-section">
+    <!-- Footer -->
+    <footer class="mt-20 text-center text-amber-800 text-sm font-semibold bg-[#fffaf0] py-10 border-t border-amber-200/50">
+        <p class="mt-2 text-3xl text-red-700 font-black tracking-wide">සුභ අලුත් අවුරුද්දක් වේවා!</p>
+        <div class="mt-8 pt-6 border-t border-amber-200/60 max-w-lg mx-auto flex flex-col items-center gap-2">
+            <p class="text-gray-500 text-sm tracking-wider uppercase flex items-center gap-2 hover:text-red-600 transition-colors">
+                <a href="https://propix.work.gd/" target="_blank" class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    Propix LK | Your Graphic Design Partner!
+                </a>
+            </p>
+        </div>
+    </footer>
 
-  <div class="ornament">
-    <div class="orn-line"></div>
-    <div class="orn-center"><div class="orn-diamond"></div><span>🌺</span><div class="orn-diamond"></div></div>
-    <div class="orn-line"></div>
-  </div>
-  <h2 class="section-heading">✦ නැකැත් සීට්ටුව 2026 ✦</h2>
+    <script>
+        // Main New Year Dawning target date
+        const awuruduUdawaTime = "2026-04-14T09:32:00+05:30";
 
-  <div class="cards-grid" id="cardsGrid"></div>
+        const events = [
+            {
+                id: 1,
+                title: "නව සඳ බැලීම (අභිනව චන්ද්‍ර වර්ෂය සඳහා)",
+                dateStr: "2026 මාර්තු 20",
+                dayStr: "සිකුරාදා",
+                timestamp: "2026-03-20T18:30:00+05:30",
+                desc: "අභිනව චන්ද්‍ර වර්ෂය සඳහා මාර්තු මස 20 වන සිකුරාදා දින නව සඳ බැලීම මැනවි.",
+                highlightTime: "සිකුරාදා දින",
+                icon: "🌙"
+            },
+            {
+                id: 2,
+                title: "පරණ අවුරුද්ද සඳහා ස්නානය",
+                dateStr: "2026 අප්‍රේල් 13",
+                dayStr: "සඳුදා",
+                timestamp: "2026-04-13T06:00:00+05:30",
+                desc: "අප්‍රේල් මස 13 වැනි සඳුදා දින දිවුල් පත් යුෂ මිශ්‍ර නානු ගා ස්නානය කොට ඉෂ්ට දේවතා අනුස්මරණයේ යෙදී වාසය මැනවි.",
+                highlightTime: "සඳුදා දින",
+                icon: "🌿"
+            },
+            {
+                id: 3,
+                title: "පුණ්‍ය කාලය",
+                dateStr: "2026 අප්‍රේල් 14",
+                dayStr: "අඟහරුවාදා",
+                timestamp: "2026-04-14T03:08:00+05:30",
+                desc: "අප්‍රේල් මස 14 වැනි අඟහරුවාදා පූර්ව භාග 03.08 සිට එදිනම අපර භාග 03.56 දක්වා පුණ්‍ය කාලය බැවින්, පූර්ව භාග 03.08 ට පළමුව ආහාර පාන ගෙන සියලු වැඩ අතහැර ආගමික වතාවත්වල යෙදීම මැනවි.",
+                highlightTime: "පෙ.ව. 03.08 සිට",
+                icon: "🙏"
+            },
+            {
+                id: 4,
+                title: "අලුත් අවුරුදු උදාව",
+                dateStr: "2026 අප්‍රේල් 14",
+                dayStr: "අඟහරුවාදා",
+                timestamp: "2026-04-14T09:32:00+05:30",
+                desc: "අප්‍රේල් මස 14 වැනි අඟහරුවාදා පූර්ව භාග 09.32 ට සිංහල අලුත් අවුරුද්ද උදාවේ.",
+                highlightTime: "පෙ.ව. 09.32 ට",
+                icon: "🌅",
+                isMain: true
+            },
+            {
+                id: 5,
+                title: "ආහාර පිසීම",
+                dateStr: "2026 අප්‍රේල් 14",
+                dayStr: "අඟහරුවාදා",
+                timestamp: "2026-04-14T10:41:00+05:30",
+                desc: "අප්‍රේල් මස 14 වැනි අඟහරුවාදා පූර්ව භාග 10.41 ට රක්ත වර්ණ (රතු) වස්ත්‍රාභරණයෙන් සැරසී දකුණු දිශාව බලා ලිප් බැඳ ගිනි මොලවා, කිරි බතක් ද, කැවිලි වර්ගයක් ද, දී කිරි සහ විළඳ ද පිළියෙළ කර ගැනීම මැනවි.",
+                highlightTime: "පෙ.ව. 10.41 ට",
+                direction: "දකුණු දිශාව",
+                colorText: "රක්ත වර්ණ (රතු)",
+                colorCode: "#ef4444",
+                icon: "🔥"
+            },
+            {
+                id: 6,
+                title: "වැඩ ඇල්ලීම, ගනුදෙනු කිරීම හා ආහාර අනුභවය",
+                dateStr: "2026 අප්‍රේල් 14",
+                dayStr: "අඟහරුවාදා",
+                timestamp: "2026-04-14T12:05:00+05:30",
+                desc: "අප්‍රේල් මස 14 වැනි අඟහරුවාදා අපර භාග 12.05 ට රක්ත වර්ණ (රතු) වස්ත්‍රාභරණයෙන් සැරසී දකුණු දිශාව බලා සියලු වැඩ අල්ලා ගනුදෙනු කොට ආහාර අනුභවය කිරීම මැනවි.",
+                highlightTime: "ප.ව. 12.05 ට",
+                direction: "දකුණු දිශාව",
+                colorText: "රක්ත වර්ණ (රතු)",
+                colorCode: "#ef4444",
+                icon: "🤝"
+            },
+            {
+                id: 7,
+                title: "හිසතෙල් ගෑම",
+                dateStr: "2026 අප්‍රේල් 15",
+                dayStr: "බදාදා",
+                timestamp: "2026-04-15T06:54:00+05:30",
+                desc: "අප්‍රේල් මස 15 වැනි බදාදා පූර්ව භාග 06.54 ට නැගෙනහිර දිශාව බලා හිසට කොහොඹ පත් ද, පයට කොලොන් පත් ද තබා පංච වර්ණ වස්ත්‍රාභරණයෙන් සැරසී කොහොඹ පත් යුෂ මිශ්‍ර නානු හා තෙල් ගා ස්නානය කිරීම මැනවි.",
+                highlightTime: "පෙ.ව. 06.54 ට",
+                direction: "නැගෙනහිර දිශාව",
+                colorText: "පංච වර්ණ",
+                colorCode: "linear-gradient(to right, #ef4444, #eab308, #22c55e, #3b82f6, #a855f7)",
+                icon: "🧴"
+            },
+            {
+                id: 8,
+                title: "නව සඳ බැලීම (අභිනව සූර්ය වර්ෂය සඳහා)",
+                dateStr: "2026 අප්‍රේල් 19",
+                dayStr: "ඉරිදා",
+                timestamp: "2026-04-19T18:30:00+05:30",
+                desc: "අභිනව සූර්ය වර්ෂය සඳහා අප්‍රේල් මස 19 වන ඉරිදා දින නව සඳ බැලීම මැනවි.",
+                highlightTime: "ඉරිදා දින",
+                icon: "🌘"
+            },
+            {
+                id: 9,
+                title: "රැකී රක්ෂා සඳහා පිටත්ව යාම",
+                dateStr: "2026 අප්‍රේල් 20",
+                dayStr: "සඳුදා",
+                timestamp: "2026-04-20T06:27:00+05:30",
+                desc: "අප්‍රේල් මස 20 වැනි සඳුදා පූර්ව භාග 06.27 ට ශ්වේත වර්ණ (සුදු) වස්ත්‍රාභරණයෙන් සැරසී කිරි බත් සහ එළකිරි මිශ්‍ර කැවිලි ද අනුභව කර දකුණු දිශාව බලා පිටත්ව යාම මැනවි.",
+                highlightTime: "පෙ.ව. 06.27 ට",
+                direction: "දකුණු දිශාව",
+                colorText: "ශ්වේත වර්ණ (සුදු)",
+                colorCode: "#ffffff",
+                hasBorder: true,
+                icon: "💼"
+            }
+        ];
 
-  <div class="ornament" style="padding-top:2rem;margin-bottom:0">
-    <div class="orn-line"></div>
-    <div class="orn-center"><div class="orn-diamond"></div><span>🌸</span><div class="orn-diamond"></div></div>
-    <div class="orn-line"></div>
-  </div>
-</section>
+        const container = document.getElementById('events-container');
 
-<footer class="footer">
-  <p>🌸 <strong>සිංහල හා දෙමළ නව වසර 2026</strong> — ගම්මැද්ද 🌸</p>
-  <p style="margin-top:0.5rem;opacity:0.35;font-size:0.66rem">Gammadda · Sinhala & Tamil New Year Nakath Seetthuwa 2026</p>
-</footer>
+        function renderEvents() {
+            events.forEach((ev) => {
+                let colorBadge = '';
+                if (ev.colorText) {
+                    let styleAttr = ev.colorCode.includes('gradient') 
+                        ? `background: ${ev.colorCode};` 
+                        : `background-color: ${ev.colorCode};`;
+                    let borderClass = ev.hasBorder ? 'border border-gray-300' : 'border border-transparent';
+                    colorBadge = `
+                        <div class="flex items-center gap-2 mt-3 bg-white/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-200 w-fit shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-gray-700">වර්ණය:</span>
+                            <div class="w-4 h-4 rounded-full shadow-inner ${borderClass}" style="${styleAttr}"></div>
+                            <span class="text-xs md:text-sm font-semibold">${ev.colorText}</span>
+                        </div>
+                    `;
+                }
 
-<script>
-/* ═══════════════════════════════════
-   STARFIELD
-═══════════════════════════════════ */
-const canvas = document.getElementById('bg-canvas');
-const ctx = canvas.getContext('2d');
-let stars = [], W, H;
-function initCanvas() {
-  W = canvas.width  = window.innerWidth;
-  H = canvas.height = window.innerHeight;
-  stars = Array.from({length:230}, () => ({
-    x: Math.random()*W, y: Math.random()*H,
-    r: Math.random()*1.7+0.2,
-    a: Math.random(),
-    da: (Math.random()*0.006+0.002)*(Math.random()<.5?1:-1)
-  }));
-}
-initCanvas();
-window.addEventListener('resize', initCanvas);
-(function drawBg() {
-  ctx.clearRect(0,0,W,H);
-  stars.forEach(s => {
-    s.a += s.da;
-    if(s.a>1||s.a<0.05) s.da*=-1;
-    ctx.beginPath();
-    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-    ctx.fillStyle=`rgba(255,228,140,${s.a})`;
-    ctx.fill();
-  });
-  requestAnimationFrame(drawBg);
-})();
+                let directionBadge = '';
+                if (ev.direction) {
+                    directionBadge = `
+                        <div class="flex items-center gap-2 mt-2 bg-amber-50/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-amber-200 w-fit shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-amber-900">දිශාව:</span>
+                            <span class="text-xs md:text-sm font-semibold text-amber-800">${ev.direction}</span>
+                        </div>
+                    `;
+                }
 
-/* ═══════════════════════════════════
-   PETALS
-═══════════════════════════════════ */
-const petalEmoji = ['🌸','🌺','✨','⭐','💛','🌼','🌻'];
-const petalWrap  = document.getElementById('petals');
-function spawnPetal() {
-  const p   = document.createElement('div');
-  p.className = 'petal';
-  const dur = Math.random()*9+7;
-  const del = Math.random()*2;
-  p.style.cssText = `left:${Math.random()*100}vw;font-size:${Math.random()*12+10}px;animation-duration:${dur}s;animation-delay:${del}s;`;
-  p.textContent = petalEmoji[Math.floor(Math.random()*petalEmoji.length)];
-  petalWrap.appendChild(p);
-  setTimeout(() => p.remove(), (dur+del+1)*1000);
-}
-for(let i=0;i<14;i++) setTimeout(spawnPetal, i*250);
-setInterval(spawnPetal, 850);
+                const cardHTML = `
+                    <div class="nekath-card reveal p-5 md:p-8 mb-8 ${ev.isMain ? 'border-red-400 bg-red-50/30' : ''}">
+                        <div class="flex flex-col lg:flex-row gap-6 md:gap-8 items-start lg:items-center">
+                            
+                            <!-- Content Side -->
+                            <div class="flex-1 w-full">
+                                <div class="flex items-start gap-4 mb-3">
+                                    <div class="text-4xl md:text-5xl bg-amber-100/50 p-3 rounded-2xl shadow-sm border border-amber-50">
+                                        ${ev.icon}
+                                    </div>
+                                    <div>
+                                        <h2 class="text-xl md:text-2xl font-black ${ev.isMain ? 'text-red-700' : 'text-amber-900'} mb-2 leading-tight">
+                                            ${ev.title}
+                                        </h2>
+                                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                                            <span class="bg-amber-100 text-amber-900 px-3 py-1 rounded-md text-sm font-bold border border-amber-200">
+                                                ${ev.dateStr} ${ev.dayStr}
+                                            </span>
+                                            <span class="text-sm md:text-base font-bold text-gray-600 bg-gray-100 px-3 py-1 rounded-md border border-gray-200">
+                                                වේලාව: <span class="text-red-600">${ev.highlightTime}</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 text-justify leading-relaxed md:text-lg pl-0 md:pl-[5.5rem]">
+                                    ${ev.desc}
+                                </p>
+                                <div class="flex flex-wrap gap-2 md:gap-3 mt-3 pl-0 md:pl-[5.5rem]">
+                                    ${directionBadge}
+                                    ${colorBadge}
+                                </div>
+                            </div>
 
-/* ═══════════════════════════════════
-   MINI-SUN SVG TEMPLATE (for cards)
-═══════════════════════════════════ */
-function miniSunSVG() {
-  const pts = Array.from({length:12},(_,i)=>
-    `<polygon points="20,1 21.5,14 18.5,14" fill="${i%2===0?'#ffd700':'#ffaa00'}" opacity="${0.82+Math.floor(i/2)%2*0.08}" transform="rotate(${i*30} 20 20)"/>`
-  ).join('');
-  return `<svg class="csun-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">${pts}</svg>`;
-}
+                            <!-- Countdown Side -->
+                            <div class="w-full lg:w-72 bg-gradient-to-br from-stone-50 to-stone-100 rounded-2xl p-4 border border-stone-200 shadow-inner flex flex-col items-center justify-center shrink-0">
+                                <p class="text-xs font-bold text-stone-500 mb-3 uppercase tracking-widest bg-white px-3 py-1 rounded-full shadow-sm border border-stone-100">ඉතිරි කාලය</p>
+                                <div class="flex gap-2 text-center w-full justify-center" id="countdown-${ev.id}">
+                                    <div class="flex-1 bg-white border border-stone-100 rounded-xl shadow-sm py-2 px-1">
+                                        <div class="font-number text-xl md:text-2xl font-black text-amber-600" id="d-${ev.id}">00</div>
+                                        <div class="text-[9px] md:text-[10px] text-gray-500 font-bold uppercase">දින</div>
+                                    </div>
+                                    <div class="flex-1 bg-white border border-stone-100 rounded-xl shadow-sm py-2 px-1">
+                                        <div class="font-number text-xl md:text-2xl font-black text-amber-600" id="h-${ev.id}">00</div>
+                                        <div class="text-[9px] md:text-[10px] text-gray-500 font-bold uppercase">පැය</div>
+                                    </div>
+                                    <div class="flex-1 bg-white border border-stone-100 rounded-xl shadow-sm py-2 px-1">
+                                        <div class="font-number text-xl md:text-2xl font-black text-amber-600" id="m-${ev.id}">00</div>
+                                        <div class="text-[9px] md:text-[10px] text-gray-500 font-bold uppercase">මිනිත්තු</div>
+                                    </div>
+                                    <div class="flex-1 bg-white border border-stone-100 rounded-xl shadow-sm py-2 px-1">
+                                        <div class="font-number text-xl md:text-2xl font-black text-red-500" id="s-${ev.id}">00</div>
+                                        <div class="text-[9px] md:text-[10px] text-gray-500 font-bold uppercase">තත්පර</div>
+                                    </div>
+                                </div>
+                                <div id="msg-${ev.id}" class="hidden mt-3 text-green-700 font-bold text-sm bg-green-100/80 border border-green-200 px-4 py-2 rounded-lg w-full text-center">
+                                    නැකැත් වේලාව පසු වී ඇත. ✓
+                                </div>
+                            </div>
 
-/* ═══════════════════════════════════
-   EVENT DATA
-═══════════════════════════════════ */
-const events = [
-  {
-    num:'01', icon:'🔥', title:'කවි සඳ බැළීම',
-    sub:'KAVI SANDA BAELIMA',
-    target: new Date('2026-04-19T06:00:00'),
-    cdLabel:'අප්‍රේල් 19 | කවි සඳ බැළීම දක්වා',
-    desc: `අතිශය චන්ද්‍ර විශේෂ සඳහා <span class="hl-date">මාර්තු මස 20 වන සිකුරාදා</span> දින ද,
-           අතිශය සූර්ය විශේෂ සඳහා <span class="hl-date">අප්‍රේල් මස 19 වන</span>
-           ඉරිදා දින ද කවි සඳ බැළීම මැනවි.`
-  },
-  {
-    num:'02', icon:'🌿', title:'පරණ අවුරුද්ද සඳහා ස්නානය',
-    sub:'PARAN AVURUDDA SNAANAYA',
-    target: new Date('2026-04-13T08:00:00'),
-    cdLabel:'අප්‍රේල් 13 | ස්නාන දිනය දක්වා',
-    desc: `<span class="hl-date">අප්‍රේල් මස 13 වෙනි</span> සඳුදා දින
-           දිවුල් පත් යුමු මිගු නානු ගා ස්නානය කොට
-           ඉන්ට දෙවනා අනුස්මරණයේ යෙදී වාසය මැනවි.`
-  },
-  {
-    num:'03', icon:'☀️', title:'අලුත් අවුරුදු උදාව',
-    sub:'ALUTH AVURUDU UDAAWA',
-    target: new Date('2026-04-14T09:32:00'),
-    cdLabel:'අප්‍රේල් 14 | 09:32 | නව අවුරුදු උදාව දක්වා',
-    desc: `<span class="hl-date">අප්‍රේල් මස 14 වෙනි</span> අඟහරුවාදා
-           පූර්ව භාග <span class="hl-time">09:32</span> ට
-           සිංහල අලුත් අවුරුදු උදාවේසි.`
-  },
-  {
-    num:'04', icon:'🕯️', title:'පුණප කාලය',
-    sub:'PUNAPA KALAYA',
-    target: new Date('2026-04-14T03:08:00'),
-    cdLabel:'අප්‍රේල් 14 | 03:08 | පුණප කාලය දක්වා',
-    desc: `<span class="hl-date">අප්‍රේල් මස 14 වෙනි</span> අඟහරුවාදා
-           පූර්ව භාග <span class="hl-time">03:08</span> සිට
-           ළදිනම අපර භාග <span class="hl-time">03:56</span> දක්වා පුණප කාලය බැවින්,
-           <span class="hl-date">අප්‍රේල් 14</span> පූර්ව භාග <span class="hl-time">03:08</span> ට
-           පළමුව ආහාර පාන ගෙන සියලු වැඩ අත්හැර
-           ආගමික වත්යාවත්වල යෙදීම මැනවි.`
-  },
-  {
-    num:'05', icon:'🍚', title:'ආහාර පිසීම',
-    sub:'AAHARA PISEEMA',
-    target: new Date('2026-04-14T10:41:00'),
-    cdLabel:'අප්‍රේල් 14 | 10:41 | ආහාර පිසීම දක්වා',
-    desc: `<span class="hl-date">අප්‍රේල් මස 14 වෙනි</span> අඟහරුවාදා
-           පූර්ව භාග <span class="hl-time">10:41</span> ට රක්ත වර්ණ වස්තූරණයෙන්
-           සාරිසි දකුණු දිගාව බලා ලිප් බඳා ගිනි මෙලවා
-           කිරි බතක්ද, කෑව්ලී විශේෂයක්, දී කිරි සහ විලඳ ද,
-           පිළිලෙල කර ගැනීම මැනවි.`
-  },
-  {
-    num:'06', icon:'💫', title:'වැඩ ඇළ්ළිම, ගනුදෙනු හා ආහාර අනුභවය',
-    sub:'WADA AELLIMA · GAANUDENUU',
-    target: new Date('2026-04-14T12:05:00'),
-    cdLabel:'අප්‍රේල් 14 | 12:05 | වැඩ ඇළ්ළිම දක්වා',
-    desc: `<span class="hl-date">අප්‍රේල් මස 14 වෙනි</span> අඟහරුවාදා
-           අපර භාග <span class="hl-time">12:05</span> ට
-           රක්ත වර්ණ වස්තූරණයෙන් සාරිසි
-           දකුණු දිගාව බලා සිතල් වැඩ ඇළ්ළා
-           ගනුදෙනු කොට ආහාර අනුභව කිරීම මැනවි.`
-  },
-  {
-    num:'07', icon:'🌊', title:'හිසතෙල් ගෑම',
-    sub:'HISATEL GAEMA',
-    target: new Date('2026-04-15T06:54:00'),
-    cdLabel:'අප්‍රේල් 15 | 06:54 | හිසතෙල් ගෑම දක්වා',
-    desc: `<span class="hl-date">අප්‍රේල් මස 15 වෙනි</span> බදාදා
-           පූර්ව භාග <span class="hl-time">06:54</span> ට
-           නෙළෙනෙකිරිට දිගාව බලා හිතා කොහොඹා පත්ද,
-           පාළ කොළේන් පත් ද තබා පස්ව වර්ණ
-           වස්තූරණයෙන් සාරිසි කෝළ් පුළු මිගු
-           නානු හා නෙල් ගා ස්නානය කිරීම මැනවි.`
-  },
-  {
-    num:'08', icon:'🛡️', title:'රැකි රක්ෂා සඳහා පිටත්ව යාම',
-    sub:'RUKI RAKSHA SANDAHA',
-    target: new Date('2026-04-20T06:27:00'),
-    cdLabel:'අප්‍රේල් 20 | 06:27 | පිටත්ව යාම දක්වා',
-    desc: `<span class="hl-date">අප්‍රේල් මස 20 වෙනි</span> සඳුදා
-           පූර්ව භාග <span class="hl-time">06:27</span> ට
-           හරිත වර්ණ වස්තූරණයෙන් සාරිසි
-           කිරිබත් සහ එළකිරි මිගු කාළිලිඳ අනුභව කර
-           දකුණු දිගාව බලා පිටත් වීම මැනවි.`
-  }
-];
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
 
-/* ═══════════════════════════════════
-   BUILD CARDS
-═══════════════════════════════════ */
-const grid = document.getElementById('cardsGrid');
-events.forEach((ev, i) => {
-  const card = document.createElement('div');
-  card.className = 'ecard';
-  card.dataset.delay = i * 80;
-  card.innerHTML = `
-    <div class="ecard-head">
-      <div class="csun">${miniSunSVG()}<div class="csun-core"></div></div>
-      <div class="card-text-wrap">
-        <div class="card-title">${ev.icon} ${ev.title}</div>
-        <div class="card-num">EVENT ${ev.num} · ${ev.sub}</div>
-      </div>
-    </div>
-    <div class="ecard-body">
-      <p class="ecard-desc">${ev.desc}</p>
-      <div class="ecard-cd">
-        <div class="ecd-label">☀ ${ev.cdLabel}</div>
-        <div class="ecd-boxes" id="cd${i}"></div>
-      </div>
-    </div>
-    <div class="ecard-bar"></div>
-  `;
-  grid.appendChild(card);
-});
+        // Timer calculation logic
+        function calculateTimeLeft(targetDate) {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
 
-/* ═══════════════════════════════════
-   COUNTDOWN ENGINE
-═══════════════════════════════════ */
-function pad(n) { return String(n).padStart(2,'0'); }
+            if (distance < 0) return null;
 
-function diff(target) {
-  const ms = target - Date.now();
-  if(ms <= 0) return null;
-  const s = Math.floor(ms/1000);
-  return { d:Math.floor(s/86400), h:Math.floor(s%86400/3600), m:Math.floor(s%3600/60), s:s%60 };
-}
+            return {
+                days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+                hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+                seconds: Math.floor((distance % (1000 * 60)) / 1000)
+            };
+        }
 
-/* Main hero */
-const MAIN = new Date('2026-04-14T09:32:00');
-function tickMain() {
-  const t = diff(MAIN);
-  document.getElementById('mD').textContent = t?pad(t.d):'00';
-  document.getElementById('mH').textContent = t?pad(t.h):'00';
-  document.getElementById('mM').textContent = t?pad(t.m):'00';
-  document.getElementById('mS').textContent = t?pad(t.s):'00';
-}
-tickMain(); setInterval(tickMain, 1000);
+        function updateAllCountdowns() {
+            // Update Main Awurudu Countdown
+            const mainTarget = new Date(awuruduUdawaTime).getTime();
+            const mainTimeLeft = calculateTimeLeft(mainTarget);
+            
+            const mainContainer = document.getElementById('main-countdown-container');
+            const mainMsg = document.getElementById('main-msg');
 
-/* Cards */
-const LABELS = ['දිනය','පැය','මිනිත්','තත්'];
-function tickCards() {
-  events.forEach((ev, i) => {
-    const el = document.getElementById('cd'+i);
-    if(!el) return;
-    const t = diff(ev.target);
-    if(!t) {
-      el.innerHTML = `<div class="ecd-done">✅ නැකැත් කාලය ගෙවී ගොස් ඇත</div>`;
-      return;
-    }
-    el.innerHTML = [t.d,t.h,t.m,t.s].map((v,j)=>`
-      <div class="ecd-unit">
-        <span class="ecd-n">${pad(v)}</span>
-        <span class="ecd-l">${LABELS[j]}</span>
-      </div>`).join('');
-  });
-}
-tickCards(); setInterval(tickCards, 1000);
+            if (!mainTimeLeft) {
+                if(mainContainer) mainContainer.style.display = 'none';
+                if(mainMsg) mainMsg.classList.remove('hidden');
+            } else {
+                document.getElementById('main-d').innerText = mainTimeLeft.days.toString().padStart(2, '0');
+                document.getElementById('main-h').innerText = mainTimeLeft.hours.toString().padStart(2, '0');
+                document.getElementById('main-m').innerText = mainTimeLeft.minutes.toString().padStart(2, '0');
+                document.getElementById('main-s').innerText = mainTimeLeft.seconds.toString().padStart(2, '0');
+            }
 
-/* ═══════════════════════════════════
-   SCROLL REVEAL
-═══════════════════════════════════ */
-const ro = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if(e.isIntersecting) {
-      const d = parseInt(e.target.dataset.delay||0);
-      setTimeout(()=>e.target.classList.add('visible'), d);
-      ro.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.07 });
-document.querySelectorAll('.ecard').forEach(c => ro.observe(c));
-</script>
+            // Update Individual Event Countdowns
+            events.forEach(ev => {
+                const eventTarget = new Date(ev.timestamp).getTime();
+                const timeLeft = calculateTimeLeft(eventTarget);
+                
+                const countdownEl = document.getElementById(`countdown-${ev.id}`);
+                const msgEl = document.getElementById(`msg-${ev.id}`);
+
+                if (!timeLeft) {
+                    if (countdownEl) countdownEl.style.display = 'none';
+                    if (msgEl) msgEl.classList.remove('hidden');
+                } else {
+                    document.getElementById(`d-${ev.id}`).innerText = timeLeft.days.toString().padStart(2, '0');
+                    document.getElementById(`h-${ev.id}`).innerText = timeLeft.hours.toString().padStart(2, '0');
+                    document.getElementById(`m-${ev.id}`).innerText = timeLeft.minutes.toString().padStart(2, '0');
+                    document.getElementById(`s-${ev.id}`).innerText = timeLeft.seconds.toString().padStart(2, '0');
+                }
+            });
+        }
+
+        // Initialize and setup scroll animations
+        function init() {
+            renderEvents();
+            updateAllCountdowns();
+            setInterval(updateAllCountdowns, 1000);
+
+            // Intersection Observer for scroll animations
+            const reveals = document.querySelectorAll('.reveal');
+            const revealOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                });
+            }, revealOptions);
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
+            });
+        }
+
+        // Run on load
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
 </body>
 </html>
